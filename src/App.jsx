@@ -1,10 +1,19 @@
 import "./assets/style.css";
+import { useState } from 'react';
+import FullHeightComponent from "./components/FullHeight";
 
 function App() {
+  const [sidebarActive, setSidebarActive] = useState(false);
+
+  const handleSidebarToggle = () => {
+    setSidebarActive((prev) => !prev);
+  };
+
   return (
-    <body>
+    <>
+      <FullHeightComponent />
       <div className="wrapper d-flex align-items-stretch">
-        <nav id="sidebar" className="active">
+        <nav id="sidebar"  className={sidebarActive ? 'active' : ''}>
           <div className="p-4 pt-5">
             <a
               href="#"
@@ -83,15 +92,14 @@ function App() {
         <div id="content" className="p-4 p-md-5">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-              <button
+              <button 
                 type="button"
                 id="sidebarCollapse"
-                className="btn btn-primary"
-              >
+                className="btn btn-primary" onClick={handleSidebarToggle}>
                 <i className="fa fa-bars" />
                 <span className="sr-only">Toggle Menu</span>
               </button>
-              <button
+              <button 
                 className="btn btn-dark d-inline-block d-lg-none ml-auto collapsed"
                 type="button"
                 data-toggle="collapse"
@@ -153,7 +161,9 @@ function App() {
           </p>
         </div>
       </div>
-    </body>
+      <div>
+      </div>
+    </>
   );
 }
 
