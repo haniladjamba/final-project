@@ -143,10 +143,39 @@ function App() {
             </div>
           </nav>
           <h2 className="mb-4">Sidebar #01</h2>
+              {/* Jerrico part */}
+                      <div className="row">
+          <div className="col-sm-6 mb-3 mb-sm-0">
             <div className="card">
-              <div className="card-title display-4">Today list</div>
-              <Upcoming/>
+              <div className="card-body">
+                <p className="card-title display-6 lead">Today to-do list</p>
+                <hr />
+                <Upcoming/>
+              </div>
             </div>
+          </div>
+
+          <div className="col-sm-6">
+            <div className="card">
+              <div className="card-body">
+                <p className="card-title display-6 lead">Today's Reward</p>
+                <hr />
+                <ul style={{fontSize: "25px"}} className="lead">
+                  Here are the reward list
+                  <li style={{fontSize: "20px"}}>
+                    an eating coupon for dondon
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    a 5Gb internet
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+            {/*End of Jerrico part */}
         </div>
       </div>
       <div>
