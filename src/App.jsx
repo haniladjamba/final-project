@@ -155,7 +155,7 @@ function App() {
             </div>
           </div>
 
-          <div className="col-sm-6">
+          <div className="col-sm-6 mb-3 mb-sm-0">
             <div className="card">
               <div className="card-body">
                 <p className="card-title display-6 lead">Today's Reward</p>
@@ -173,6 +173,54 @@ function App() {
               </div>
             </div>
           </div>
+
+          <div className="col-sm-6">
+            <div className="card">
+              <div className="card-body">
+                <p className="card-title display-6 lead">Tomorrow to-do list</p>
+                <hr />
+                <ul style={{fontSize: "25px", maxHeight: "120px"}} className="overflow-auto lead">
+                  You need to do:
+                  <li style={{fontSize: "20px"}}>
+                    Clean my room
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    throw the trash
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    Buy some eggs
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    ...
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    ...
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    ...
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    ...
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    ...
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-sm-6">
+    <div className="card">
+      <div className="card-body">
+        <h5 className="card-title">Special title treatment</h5>
+        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" className="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
         </div>
 
             {/*End of Jerrico part */}
