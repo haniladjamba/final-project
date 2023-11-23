@@ -147,7 +147,7 @@ function App() {
             <meta charSet="UTF-8" />
             <title>Task Priority</title>
             <link rel="stylesheet" href="styles.css" />
-            <div className="priority-box">
+            <div className="priority-box justify-content-center d-flex">
               <div className="priority high">
                 <div className="card">
                   <div className="card-header">
