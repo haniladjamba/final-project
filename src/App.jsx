@@ -1,6 +1,7 @@
 import "./assets/style.css";
 import { useState } from "react";
 import FullHeightComponent from "./components/FullHeight";
+import TodayCard from "./components/TodayCard";
 
 function App() {
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -144,7 +145,7 @@ function App() {
           </nav>
           <h2 className="mb-4">Sidebar #01</h2>
           <div>
-            <div className="big-box">Box 1</div>
+            <TodayCard />
             <div className="big-box">Box 2</div>
             <div className="clear" />{" "}
             {/* Clear the float after the second box */}
