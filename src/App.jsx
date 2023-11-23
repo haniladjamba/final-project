@@ -145,12 +145,23 @@ function App() {
           <h2 className="mb-4">Sidebar #01</h2>
               {/* Jerrico part */}
                       <div className="row">
-          <div className="col-sm-6 mb-3 mb-sm-0">
+          <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
             <div className="card">
               <div className="card-body">
                 <p className="card-title display-6 lead">Today to-do list</p>
                 <hr />
                 <Upcoming/>
+                <ul style={{fontSize: "25px", maxHeight: "120px"}} className="overflow-auto lead">Test
+                  <li style={{fontSize: "20px"}}>
+                    <p>Hello</p>
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    <p>How are</p>
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    <p>You?</p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -160,13 +171,22 @@ function App() {
               <div className="card-body">
                 <p className="card-title display-6 lead">Today's Reward</p>
                 <hr />
-                <ul style={{fontSize: "25px"}} className="lead">
+                <ul style={{fontSize: "25px", maxHeight: "120px"}} className="overflow-auto lead">
                   Here are the reward list
                   <li style={{fontSize: "20px"}}>
                     an eating coupon for dondon
                   </li>
                   <li style={{fontSize: "20px"}}>
                     a 5Gb internet
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    ...
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    ...
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    ...
                   </li>
 
                 </ul>
