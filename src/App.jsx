@@ -1,5 +1,5 @@
 import "./assets/style.css";
-import { useState } from 'react';
+import { useState } from "react";
 import FullHeightComponent from "./components/FullHeight";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <>
       <FullHeightComponent />
       <div className="wrapper d-flex align-items-stretch">
-        <nav id="sidebar"  className={sidebarActive ? 'active' : ''}>
+        <nav id="sidebar" className={sidebarActive ? "active" : ""}>
           <div className="p-4 pt-5">
             <a
               href="#"
@@ -92,14 +92,16 @@ function App() {
         <div id="content" className="p-4 p-md-5">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-              <button 
+              <button
                 type="button"
                 id="sidebarCollapse"
-                className="btn btn-primary" onClick={handleSidebarToggle}>
+                className="btn btn-primary"
+                onClick={handleSidebarToggle}
+              >
                 <i className="fa fa-bars" />
                 <span className="sr-only">Toggle Menu</span>
               </button>
-              <button 
+              <button
                 className="btn btn-dark d-inline-block d-lg-none ml-auto collapsed"
                 type="button"
                 data-toggle="collapse"
@@ -141,28 +143,88 @@ function App() {
             </div>
           </nav>
           <h2 className="mb-4">Sidebar #01</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          {/*For Page*/}
+          <div className="page">
+            {/*Card*/}
+            <div className="card">
+              {/*Card Header*/}
+              <div className="card-header">
+                <p>
+                  {" "}
+                  <i className="fa fa-bars" />{" "}
+                  <i className="fa fa-calendar ml-4" aria-hidden="true" />{" "}
+                  <i className="fa fa-star ml-4" aria-hidden="true" />{" "}
+                  <span className="float-right">
+                    {" "}
+                    <span className="mr-4 navTask">Task</span>{" "}
+                    <span className="mr-4">Archive</span>{" "}
+                    <i className="fa fa-search" aria-hidden="true" />{" "}
+                  </span>{" "}
+                </p>
+              </div>
+              {/*Card Body*/}
+              <div className="card-body">
+                <p className="heading1">
+                  {" "}
+                  <span className="today">Today</span>{" "}
+                  <span className="float-right headingright">7h 15min</span>{" "}
+                </p>
+                <p>
+                  {" "}
+                  <i className="fa fa-calendar mr-2" aria-hidden="true" />{" "}
+                  <span className="task mt-4">Take kids to school</span>{" "}
+                  <span className="time ml-2">8:00-8:30AM</span>{" "}
+                  <span className="float-right">30min</span>{" "}
+                </p>
+                <p>
+                  <i className="	fa fa-circle-thin mr-2" />{" "}
+                  <span className="task">Process email</span>{" "}
+                  <i className="fa fa-thumb-tack ml-2" aria-hidden="true" />{" "}
+                  <span className="time ml-2">8:00-9:30AM</span>
+                  <span className="float-right">1h</span>{" "}
+                </p>
+                <p>
+                  <i className="fa fa-calendar mr-2" aria-hidden="true" />{" "}
+                  <span className="task">Daily Stand-Up meeting</span>{" "}
+                  <span className="time ml-2">9:00-10:00AM</span>{" "}
+                  <span className="float-right">30min</span>{" "}
+                </p>
+                <p>
+                  <i className="	fa fa-circle-thin mr-2" />
+                  <span className="task">Create new templates</span>{" "}
+                  <i className="fa fa-thumb-tack ml-2" aria-hidden="true" />{" "}
+                  <i className="fa fa-user ml-2" />{" "}
+                  <span className="time ml-2">10:00-11:45AM</span>{" "}
+                  <span className="float-right">1h 45min</span>{" "}
+                </p>
+                <p>
+                  <i className="fa fa-calendar mr-2" aria-hidden="true" />{" "}
+                  <span className="task">Lunch with Anna</span>{" "}
+                  <span className="time ml-2">12:00-12:30PM</span>{" "}
+                  <span className="float-right">30min</span>{" "}
+                </p>
+                <p className="text-muted">
+                  <i className="fa fa-plus mr-1" aria-hidden="true" /> Add Task
+                  for Today
+                </p>
+                <p className="heading2">
+                  <span className="tomorrow">Tomorrow</span>{" "}
+                  <span className="float-right headingright">6h 30min</span>{" "}
+                </p>
+                <p className="task2 mt-4">
+                  <i className="fa fa-calendar mr-2" aria-hidden="true" />{" "}
+                  <span className="task">
+                    Breakfast with the Marketing team
+                  </span>{" "}
+                  <span className="time ml-2">8:00-8:30AM</span>{" "}
+                  <span className="float-right">30min</span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-      </div>
+      <div></div>
     </>
   );
 }
