@@ -2,7 +2,7 @@ import "./assets/style.css";
 import 'bootstrap/dist/css/bootstrap.css'
 import { useState } from 'react';
 import FullHeightComponent from "./components/FullHeight";
-import Upcoming from "./components/Upcoming"
+// import Upcoming from "./components/Upcoming"
 
 function App() {
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -150,16 +150,19 @@ function App() {
               <div className="card-body">
                 <p className="card-title display-6 lead">Today to-do list</p>
                 <hr />
-                <Upcoming/>
-                <ul style={{fontSize: "25px", maxHeight: "120px"}} className="overflow-auto lead">Test
+                {/* <Upcoming/> */}
+                <ul style={{fontSize: "25px", maxHeight: "120px"}} className="overflow-auto lead">This is only a Test ^^
                   <li style={{fontSize: "20px"}}>
-                    <p>Hello</p>
+                    Hello
                   </li>
                   <li style={{fontSize: "20px"}}>
-                    <p>How are</p>
+                    How are
                   </li>
                   <li style={{fontSize: "20px"}}>
-                    <p>You?</p>
+                    You
+                  </li>
+                  <li style={{fontSize: "20px"}}>
+                    Today?
                   </li>
                 </ul>
               </div>
@@ -234,9 +237,25 @@ function App() {
           <div className="col-sm-6">
     <div className="card">
       <div className="card-body">
-        <h5 className="card-title">Special title treatment</h5>
-        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" className="btn btn-primary">Go somewhere</a>
+        <p className="card-title lead display-6">Other list</p>
+        <hr />
+        <ul style={{fontSize: "25px", maxHeight: "120px"}} className="overflow-auto lead">
+          You need to do:
+          <li style={{fontSize: "20px"}}>
+            Clean my room "again"
+          </li>
+          <li style={{fontSize: "20px"}}>
+            call the plumber
+          </li>
+          <li style={{fontSize: "20px"}}>
+            defrost the fish
+          </li>
+          <li style={{fontSize: "20px"}}>
+            reset the router
+          </li>
+
+
+        </ul>
       </div>
     </div>
   </div>
