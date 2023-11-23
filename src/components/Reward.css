@@ -1,0 +1,24 @@
+/* src/components/Reward.css */
+.reward-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reward-box {
+    border: 2px solid #3498db;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  p {
+    color: #777;
+  }
+  
