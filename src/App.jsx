@@ -143,15 +143,27 @@ function App() {
               </div>
             </div>
           </nav>
-          <h2 className="mb-4">Sidebar #01</h2>
           <div>
-            <TodayCard />
-            <div className="big-box">Box 2</div>
-            <div className="clear" />{" "}
-            {/* Clear the float after the second box */}
-            <div className="big-box">Box 3</div>
-            <div className="big-box">Box 4</div>
-            <div className="clear" />{" "}
+            <div className="container">
+              <div className="row gx-3 justify-content-center">
+                <div className="col-md-6">
+                  <TodayCard />
+                </div>
+
+                <div className="col-md-6">
+                  <TodayCard />
+                </div>
+              </div>
+              <div className="row gx-3 justify-content-center">
+                <div className="col-md-6">
+                  <TodayCard />
+                </div>
+
+                <div className="col-md-6">
+                  <TodayCard />
+                </div>
+              </div>
+            </div>
             {/* Clear the float after the fourth box */}
           </div>
         </div>
