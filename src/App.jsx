@@ -149,7 +149,6 @@ function App() {
               {/* Jerrico part */}
                       <div className="row">
               <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
-                
                 <UpcomingTask />
               </div>
               <div className="col-sm-6 mb-3 mb-sm-0 pb-3">

@@ -1,10 +1,11 @@
 import Upcoming from "./Upcoming"
+
 const UpcomingTask = () => {
     return(
         <div>
             
             <div className="">
-            <div className="card">
+            <div className="card" style={{backgroundColor: ""}}>
               <div className="card-body">
                 <p className="card-title display-6 lead">Today to-do list</p>
                 <hr />

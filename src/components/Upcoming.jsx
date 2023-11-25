@@ -52,6 +52,11 @@ import { useState } from 'react';
             </li>
             ))}
         </ul>
+        <ul>
+            <li>
+                finish the Front-End final project
+            </li>
+        </ul>
         </div>
     );
     };
