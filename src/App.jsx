@@ -2,7 +2,6 @@ import "./assets/style.css";
 import 'bootstrap/dist/css/bootstrap.css'
 import { useState } from 'react';
 import FullHeightComponent from "./components/FullHeight";
-// import Upcoming from "./components/Upcoming"
 import UpcomingReward from "./components/todayReward"
 import UpcomingTask from "./components/todayTask"
 import UpcomingTomorrow from "./components/UpcomingTomorrow";
@@ -150,6 +149,7 @@ function App() {
               {/* Jerrico part */}
                       <div className="row">
               <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+                
                 <UpcomingTask />
               </div>
               <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
