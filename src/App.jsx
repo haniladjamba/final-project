@@ -145,7 +145,7 @@ function App() {
             </div>
           </nav>
           <h2 className="mb-4"></h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat reprehenderit tempora optio inventore eius aperiam odio, tenetur temporibus quae doloremque asperiores officia sit perferendis autem repudiandae voluptatibus harum! Voluptatum?</p>
+          <p>On this page, you can view a comprehensive list of rewards attainable through completed tasks. Rewards are generated upon the completion of specific tasks, and after finishing a task, you can press the 'Claim' button to redeem the corresponding reward.</p>
           <div>
             <Reward />
           </div>

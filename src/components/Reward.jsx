@@ -21,8 +21,8 @@ const Reward = () => {
         <div className="reward-box" key={reward.id}>
           <h3>{reward.name}</h3>
           <p>{reward.description}</p>
-          <div className="reward-id">
-            Reward ID: {reward.id}
+          <div className="task-id">
+            Task ID: {reward.id}
             <button
               className="claim-button"
               onClick={() => handleClaim(reward.id)}
