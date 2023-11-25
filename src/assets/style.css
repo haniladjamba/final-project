@@ -10941,7 +10941,7 @@ a[data-toggle=collapse] {
   }
   
   .card-header {
-    background-color: #f0f0f0;
+    background-color: #5885AF;
     padding: 15px; /* Increased padding */
     border-bottom: 1px solid #ccc;
   }
@@ -10951,10 +10951,12 @@ a[data-toggle=collapse] {
   }
   
   .card-body {
+    background-color: #5885AF;
     padding: 15px; /* Increased padding */
   }
   
   .card-body p {
+    background-color: #FFFFFF;
     margin: 8px 0; /* Adjusted margin */
     font-size: 18px; /* Increased font size */
   }  

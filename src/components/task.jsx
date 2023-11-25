@@ -12,8 +12,9 @@ const Task = () => {
             </div>
             <div className="card-body">
               {/* High priority tasks here */}
-              <p>Task 1</p>
-              <p>Task 2</p>
+              <p>Make payment to Tokopedia</p>
+              <p>Office Rent</p>
+              <p>Office grocery shopping</p>
               {/* ... */}
             </div>
           </div>
@@ -25,8 +26,8 @@ const Task = () => {
             </div>
             <div className="card-body">
               {/* Medium priority tasks here */}
-              <p>Task 3</p>
-              <p>Task 4</p>
+              <p>Final Project Front-End</p>
+              <p>Final Project System Analysis and Design</p>
               {/* ... */}
             </div>
           </div>
@@ -38,8 +39,8 @@ const Task = () => {
             </div>
             <div className="card-body">
               {/* Low priority tasks here */}
-              <p>Task 5</p>
-              <p>Task 6</p>
+              <p>Ask for Lunch to Clients</p>
+              <p>Create weekly tasks plan</p>
               {/* ... */}
             </div>
           </div>

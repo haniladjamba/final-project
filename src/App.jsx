@@ -144,7 +144,7 @@ function App() {
             </div>
           </nav>
           <h2 className="mb-4">Sidebar #01</h2>
-          <p>Efficiently navigating the student life demands excellent time management. Hence, this to-do list can aid you in accomplishing your tasks.</p>
+          <p>The Task list is organized into three priority levels: High, Medium, and Low, ensuring focused attention and efficient execution based on importance and urgency.</p>
           <div>
             <Task/>
           </div>
