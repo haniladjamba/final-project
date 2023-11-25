@@ -29,3 +29,6 @@
 .todo-item.editing .todo-actions .edit-icon {
     display: none !important;
 }
+.col-md-9{
+    justify-content: right;
+}

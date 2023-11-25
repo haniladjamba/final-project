@@ -26,7 +26,7 @@ const TodoApp = () => {
     const updatedTasks = [...tasks];
     updatedTasks[index].completed = !updatedTasks[index].completed;
     setTasks(updatedTasks);
-  };
+  };
   const editTask = (index, newValue) => {
     const updatedTasks = [...tasks];
     updatedTasks[index] = newValue;

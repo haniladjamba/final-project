@@ -1,23 +1,29 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable no-unused-vars */
 import "./assets/style.css";
 import { useState } from "react";
 import TodoApp from "./todoapp";
 import TodoApp1 from "./todoapp1";
 
-
-
 function App() {
   const [sidebarActive, setSidebarActive] = useState(false);
+  const [todoAppContainers, setTodoAppContainers] = useState([]);
 
   const handleSidebarToggle = () => {
     setSidebarActive((prev) => !prev);
   };
 
+  const addTodoAppContainer = () => {
+    const newTodoAppContainer = <><TodoApp /> <TodoApp1 /></>;
+    setTodoAppContainers((prevContainers) => [...prevContainers, newTodoAppContainer]);
+  };
+
   return (
-    
     <>
+      {/* ... (unchanged code) */}
       <div className="wrapper d-flex align-items-stretch">
         <nav id="sidebar" className={sidebarActive ? "active" : ""}>
-          <div className="p-4 pt-5">
+        <div className="p-4 pt-5">
             <a
               href="#"
               className="img logo rounded-circle mb-5"
@@ -94,13 +100,12 @@ function App() {
         </nav>
         <div id="content" className="p-4 p-md-5">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
+          <div className="container-fluid">
               <button
                 type="button"
                 id="sidebarCollapse"
                 className="btn btn-primary"
-                onClick={handleSidebarToggle}
-              >
+                onClick={handleSidebarToggle}>
                 <i className="fa fa-bars" />
                 <span className="sr-only">Toggle Menu</span>
               </button>
@@ -118,7 +123,7 @@ function App() {
               <div
                 className="navbar-collapse collapse"
                 id="navbarSupportedContent"
-                
+                style={{}}
               >
                 <ul className="nav navbar-nav ml-auto">
                   <li className="nav-item active">
@@ -145,31 +150,32 @@ function App() {
               </div>
             </div>
           </nav>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus fuga, harum laborum similique impedit quas ut suscipit? Nam, numquam quia totam labore inventore cumque fuga aspernatur possimus laboriosam, placeat quis.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus fuga, harum laborum similique impedit quas ut suscipit? Nam, numquam quia totam labore inventore cumque fuga aspernatur possimus laboriosam, placeat quis.
+          </p>
           <div>
+          <div className="col-md-9 ">
+                  <button type="button" className="btn btn-primary" onClick={addTodoAppContainer}>
+                    Add
+                  </button>
+                </div>
+          <div className="row gx-3 justify-content-center">
+                
+              </div>
             <div className="container">
               <div className="row gx-3 justify-content-center">
-                <div className="col-md-6">
-                  <TodoApp />
-                </div>
-                <div className="col-md-6">
-                  <TodoApp />
-                </div>
+                {todoAppContainers.map((container, index) => (
+                  <div className="col-md-6" key={index}>
+                    {container}
+                  </div>
+                ))}
               </div>
-              <div className="row gx-3 justify-content-center">
-                <div className="col-md-6">
-                  <TodoApp1 />
-                </div>
-                <div className="col-md-6">
-                  <TodoApp1 />
-                </div>
-              </div>
+              
             </div>
             {/* Clear the float after the fourth box */}
           </div>
         </div>
       </div>
-      <div></div>
     </>
   );
 }

@@ -19,7 +19,7 @@ const TodoApp1 = () => {
   };
 
   return (
-    <div className="container m-5 p-2 rounded mx-auto bg-light shadow">
+    <div className="container m-5 p-2 rounded mx-auto bg-black">
       {/* ... (unchanged code) */}
       {/* Create todo section */}
       <div className="row m-1 p-3">
