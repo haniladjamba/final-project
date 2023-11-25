@@ -10959,4 +10959,12 @@ a[data-toggle=collapse] {
     background-color: #FFFFFF;
     margin: 8px 0; /* Adjusted margin */
     font-size: 18px; /* Increased font size */
-  }  
+  }
+  
+/* For Medium priority */
+.medium .card-header h2,
+.high .card-header h2,
+.low .card-header h2 {
+  color: white;
+}
+  
