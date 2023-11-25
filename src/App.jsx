@@ -1,6 +1,7 @@
 import "./assets/style.css";
 import { useState } from "react";
 import TodoApp from "./todoapp";
+import TodoApp1 from "./todoapp1";
 
 
 
@@ -117,7 +118,7 @@ function App() {
               <div
                 className="navbar-collapse collapse"
                 id="navbarSupportedContent"
-                style={{}}
+                
               >
                 <ul className="nav navbar-nav ml-auto">
                   <li className="nav-item active">
@@ -144,6 +145,7 @@ function App() {
               </div>
             </div>
           </nav>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus fuga, harum laborum similique impedit quas ut suscipit? Nam, numquam quia totam labore inventore cumque fuga aspernatur possimus laboriosam, placeat quis.</p>
           <div>
             <div className="container">
               <div className="row gx-3 justify-content-center">
@@ -156,10 +158,10 @@ function App() {
               </div>
               <div className="row gx-3 justify-content-center">
                 <div className="col-md-6">
-                  <TodoApp />
+                  <TodoApp1 />
                 </div>
                 <div className="col-md-6">
-                  <TodoApp />
+                  <TodoApp1 />
                 </div>
               </div>
             </div>
