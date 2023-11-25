@@ -144,6 +144,7 @@ function App() {
             </div>
           </nav>
           <h2 className="mb-4">Sidebar #01</h2>
+          <p>Efficiently navigating the student life demands excellent time management. Hence, this to-do list can aid you in accomplishing your tasks.</p>
           <div>
             <Task/>
           </div>

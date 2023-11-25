@@ -10909,7 +10909,7 @@ a[data-toggle=collapse] {
 }
  
   
-  .priority-box {
+.priority-box {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -10917,27 +10917,26 @@ a[data-toggle=collapse] {
   }
   
   .priority {
-    background-color: #fff;
     border-radius: 20px; /* Increased border-radius */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 600px; /* Increased width */
   }
   
   .high {
-    border: 6px solid red; /* Red color for high priority */
+    background-color: red; /* Red color for high priority */
   }
   
   .medium {
-    border: 6px solid orange; /* Orange color for medium priority */
+    background-color: orange; /* Orange color for medium priority */
   }
   
   .low {
-    border: 6px solid green; /* Green color for low priority */
+    background-color: green; /* Green color for low priority */
   }
   
   .card {
     border-radius: 20px;
-    border: 2px solid #ccc;
+    border: 6px solid; /* Apply the border to all cards */
     margin: 10px;
   }
   
@@ -10957,4 +10956,5 @@ a[data-toggle=collapse] {
   
   .card-body p {
     margin: 8px 0; /* Adjusted margin */
+    font-size: 18px; /* Increased font size */
   }  

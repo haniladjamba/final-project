@@ -48,4 +48,4 @@ const Task = () => {
     </div>
   );
 };
-export default Task;
+export default Task
