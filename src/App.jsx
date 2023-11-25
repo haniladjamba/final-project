@@ -144,7 +144,8 @@ function App() {
               </div>
             </div>
           </nav>
-          <h2 className="mb-4">Sidebar #01</h2>
+          <h2 className="mb-4"></h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat reprehenderit tempora optio inventore eius aperiam odio, tenetur temporibus quae doloremque asperiores officia sit perferendis autem repudiandae voluptatibus harum! Voluptatum?</p>
           <div>
             <Reward />
           </div>
