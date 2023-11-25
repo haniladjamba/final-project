@@ -1,7 +1,8 @@
 import "./assets/style.css";
 import { useState } from "react";
-import FullHeightComponent from "./components/FullHeight";
-import TodayCard from "./components/TodayCard";
+import TodoApp from "./todoapp";
+
+
 
 function App() {
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -11,8 +12,8 @@ function App() {
   };
 
   return (
+    
     <>
-      <FullHeightComponent />
       <div className="wrapper d-flex align-items-stretch">
         <nav id="sidebar" className={sidebarActive ? "active" : ""}>
           <div className="p-4 pt-5">
@@ -147,20 +148,18 @@ function App() {
             <div className="container">
               <div className="row gx-3 justify-content-center">
                 <div className="col-md-6">
-                  <TodayCard />
+                  <TodoApp />
                 </div>
-
                 <div className="col-md-6">
-                  <TodayCard />
+                  <TodoApp />
                 </div>
               </div>
               <div className="row gx-3 justify-content-center">
                 <div className="col-md-6">
-                  <TodayCard />
+                  <TodoApp />
                 </div>
-
                 <div className="col-md-6">
-                  <TodayCard />
+                  <TodoApp />
                 </div>
               </div>
             </div>
