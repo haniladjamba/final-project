@@ -3,6 +3,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { useState } from 'react';
 import FullHeightComponent from "./components/FullHeight";
 // import Upcoming from "./components/Upcoming"
+import UpcomingReward from "./components/todayReward"
+import UpcomingTask from "./components/todayTask"
+import UpcomingTomorrow from "./components/UpcomingTomorrow";
+import UpcomingOther from "./components/UpcomingOther";
 
 function App() {
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -145,120 +149,18 @@ function App() {
           <h2 className="mb-4">Sidebar #01</h2>
               {/* Jerrico part */}
                       <div className="row">
-          <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
-            <div className="card">
-              <div className="card-body">
-                <p className="card-title display-6 lead">Today to-do list</p>
-                <hr />
-                {/* <Upcoming/> */}
-                <ul style={{fontSize: "25px", maxHeight: "120px"}} className="overflow-auto lead">This is only a Test ^^
-                  <li style={{fontSize: "20px"}}>
-                    Hello
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    How are
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    You
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    Today?
-                  </li>
-                </ul>
+              <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+                <UpcomingTask />
               </div>
-            </div>
-          </div>
-
-          <div className="col-sm-6 mb-3 mb-sm-0">
-            <div className="card">
-              <div className="card-body">
-                <p className="card-title display-6 lead">Today's Reward</p>
-                <hr />
-                <ul style={{fontSize: "25px", maxHeight: "120px"}} className="overflow-auto lead">
-                  Here are the reward list
-                  <li style={{fontSize: "20px"}}>
-                    an eating coupon for dondon
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    a 5Gb internet
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    ...
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    ...
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    ...
-                  </li>
-
-                </ul>
+              <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+                <UpcomingReward />
               </div>
-            </div>
-          </div>
-
-          <div className="col-sm-6">
-            <div className="card">
-              <div className="card-body">
-                <p className="card-title display-6 lead">Tomorrow to-do list</p>
-                <hr />
-                <ul style={{fontSize: "25px", maxHeight: "120px"}} className="overflow-auto lead">
-                  You need to do:
-                  <li style={{fontSize: "20px"}}>
-                    Clean my room
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    throw the trash
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    Buy some eggs
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    ...
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    ...
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    ...
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    ...
-                  </li>
-                  <li style={{fontSize: "20px"}}>
-                    ...
-                  </li>
-
-                </ul>
+              <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+                <UpcomingTomorrow />
               </div>
-            </div>
-          </div>
-
-          <div className="col-sm-6">
-    <div className="card">
-      <div className="card-body">
-        <p className="card-title lead display-6">Other list</p>
-        <hr />
-        <ul style={{fontSize: "25px", maxHeight: "120px"}} className="overflow-auto lead">
-          You need to do:
-          <li style={{fontSize: "20px"}}>
-            Clean my room "again"
-          </li>
-          <li style={{fontSize: "20px"}}>
-            call the plumber
-          </li>
-          <li style={{fontSize: "20px"}}>
-            defrost the fish
-          </li>
-          <li style={{fontSize: "20px"}}>
-            reset the router
-          </li>
-
-
-        </ul>
-      </div>
-    </div>
-  </div>
+              <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+                <UpcomingOther />
+              </div>
 
         </div>
 
