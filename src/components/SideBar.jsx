@@ -29,7 +29,7 @@ const SideBar = () => {
               <Link to="pages/today">Today task</Link>
             </li>
             <li>
-              <Link to="#">Task Priority</Link>
+              <Link to="pages/priority">Task Priority</Link>
             </li>
           </ul>
           <div className="footer">

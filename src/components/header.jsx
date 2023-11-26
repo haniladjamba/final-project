@@ -32,7 +32,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="pages/today">
+            <Link className="nav-link" to="pages/priority">
               Priority
             </Link>
           </li>
