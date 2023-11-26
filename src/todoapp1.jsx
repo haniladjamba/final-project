@@ -35,6 +35,7 @@ const TodoApp1 = () => {
   return (
     <div className="container m-5 p-2 rounded mx-auto bg-light shadow">
       {/* ... (unchanged code) */}
+      <h3>Reward</h3>
       <div className="row m-1 p-3">
         <div className="col col-11 mx-auto">
           <div className="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center">
