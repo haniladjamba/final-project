@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import "./assets/style.css";
 
-import SideBar from "./components/sidebar";
+import SideBar from "./components/SideBar";
 
 import { useState } from "react";
 

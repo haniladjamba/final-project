@@ -140,8 +140,8 @@ const SideBar = () => {
           </div>
         </nav>
         <div>
-              <TodayTask />
-            </div>
+            <TodayTask />
+        </div>
       </div>
     </>
   );

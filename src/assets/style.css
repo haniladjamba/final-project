@@ -48,8 +48,6 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff
-    
-    
 }
 
 [tabindex="-1"]:focus {
@@ -1102,7 +1100,7 @@ pre code {
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         max-width: 50%;
-   
+        
         
     }
 
@@ -10811,8 +10809,7 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 }
 
 .wrapper {
-    width: 100%;
-    /* background-color: #FFD9B5; */
+    width: 100%
 }
 
 #sidebar {
@@ -10923,64 +10920,4 @@ a[data-toggle=collapse] {
 
 .footer p {
     color: rgba(255,255,255,.5)
-}
- 
-  
-.priority-box {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center; /* Center the priority boxes horizontally */
-  }
-  
-  .priority {
-    border-radius: 20px; /* Increased border-radius */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 600px; /* Increased width */
-  }
-  
-  .high {
-    background-color: red; /* Red color for high priority */
-  }
-  
-  .medium {
-    background-color: orange; /* Orange color for medium priority */
-  }
-  
-  .low {
-    background-color: green; /* Green color for low priority */
-  }
-  
-  .card {
-    border-radius: 20px;
-    border: 6px solid; /* Apply the border to all cards */
-    margin: 10px;
-  }
-  
-  .card-header {
-    background-color: #5885AF;
-    padding: 15px; /* Increased padding */
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .card-header h2 {
-    margin: 0;
-  }
-  
-  .card-body {
-    background-color: #5885AF;
-    padding: 15px; /* Increased padding */
-  }
-  
-  .card-body p {
-    background-color: #FFFFFF;
-    margin: 8px 0; /* Adjusted margin */
-    font-size: 18px; /* Increased font size */
-  }
-  
-/* For Medium priority */
-.medium .card-header h2,
-.high .card-header h2,
-.low .card-header h2 {
-  color: white;
 }
