@@ -31,9 +31,6 @@ const SideBar = () => {
             <li>
               <Link to="#">Task Priority</Link>
             </li>
-            <li>
-              <Link to="#">Reward</Link>
-            </li>
           </ul>
           <div className="footer">
             <p>

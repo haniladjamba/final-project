@@ -32,14 +32,9 @@ const Header = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Portfolio
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Contact
-            </a>
+            <Link className="nav-link" to="pages/today">
+              Priority
+            </Link>
           </li>
         </ul>
       </div>
