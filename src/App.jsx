@@ -1,6 +1,11 @@
 import "./assets/style.css";
+import 'bootstrap/dist/css/bootstrap.css'
 import { useState } from 'react';
 import FullHeightComponent from "./components/FullHeight";
+import UpcomingReward from "./components/todayReward"
+import UpcomingTask from "./components/todayTask"
+import UpcomingTomorrow from "./components/UpcomingTomorrow";
+import UpcomingOther from "./components/UpcomingOther";
 
 function App() {
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -10,7 +15,7 @@ function App() {
   };
 
   return (
-    <>
+    <div>
       <FullHeightComponent />
       <div className="wrapper d-flex align-items-stretch">
         <nav id="sidebar"  className={sidebarActive ? 'active' : ''}>
@@ -141,29 +146,29 @@ function App() {
             </div>
           </nav>
           <h2 className="mb-4">Sidebar #01</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+              {/* Jerrico part */}
+                      <div className="row">
+              <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+                <UpcomingTask />
+              </div>
+              <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+                <UpcomingReward />
+              </div>
+              <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+                <UpcomingTomorrow />
+              </div>
+              <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+                <UpcomingOther />
+              </div>
+
+        </div>
+
+            {/*End of Jerrico part */}
         </div>
       </div>
       <div>
       </div>
-    </>
+    </div>
   );
 }
 
