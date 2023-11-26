@@ -1,9 +1,9 @@
 import "./assets/style.css";
-import 'bootstrap/dist/css/bootstrap.css'
-import { useState } from 'react';
+import { useState } from "react";
 import FullHeightComponent from "./components/FullHeight";
-import UpcomingReward from "./components/todayReward"
-import UpcomingTask from "./components/todayTask"
+import "bootstrap/dist/css/bootstrap.css";
+import UpcomingReward from "./components/todayReward";
+import UpcomingTask from "./components/todayTask";
 import UpcomingTomorrow from "./components/UpcomingTomorrow";
 import UpcomingOther from "./components/UpcomingOther";
 
@@ -18,7 +18,7 @@ function App() {
     <div>
       <FullHeightComponent />
       <div className="wrapper d-flex align-items-stretch">
-        <nav id="sidebar"  className={sidebarActive ? 'active' : ''}>
+        <nav id="sidebar" className={sidebarActive ? "active" : ""}>
           <div className="p-4 pt-5">
             <a
               href="#"
@@ -97,14 +97,16 @@ function App() {
         <div id="content" className="p-4 p-md-5">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-              <button 
+              <button
                 type="button"
                 id="sidebarCollapse"
-                className="btn btn-primary" onClick={handleSidebarToggle}>
+                className="btn btn-primary"
+                onClick={handleSidebarToggle}
+              >
                 <i className="fa fa-bars" />
                 <span className="sr-only">Toggle Menu</span>
               </button>
-              <button 
+              <button
                 className="btn btn-dark d-inline-block d-lg-none ml-auto collapsed"
                 type="button"
                 data-toggle="collapse"
@@ -146,28 +148,27 @@ function App() {
             </div>
           </nav>
           <h2 className="mb-4">Sidebar #01</h2>
-              {/* Jerrico part */}
-                      <div className="row">
-              <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
-                <UpcomingTask />
-              </div>
-              <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
-                <UpcomingReward />
-              </div>
-              <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
-                <UpcomingTomorrow />
-              </div>
-              <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
-                <UpcomingOther />
-              </div>
 
-        </div>
+          {/* Jerrico part */}
+          <div className="row">
+            <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+              <UpcomingTask />
+            </div>
+            <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+              <UpcomingReward />
+            </div>
+            <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+              <UpcomingTomorrow />
+            </div>
+            <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+              <UpcomingOther />
+            </div>
+          </div>
 
-            {/*End of Jerrico part */}
+          {/*End of Jerrico part */}
         </div>
       </div>
-      <div>
-      </div>
+      <div></div>
     </div>
   );
 }
