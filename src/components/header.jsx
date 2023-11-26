@@ -1,5 +1,9 @@
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom"
+
 import TodayTask from "./pages/today";
+import Upcoming from "./pages/upcoming";
 
 const Header = () => {
   const [setSidebarActive] = useState(false);
@@ -39,14 +43,14 @@ const Header = () => {
           >
             <ul className="nav navbar-nav ml-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  Home
-                </a>
+                <Link className="nav-link" to="pages/upcoming">
+                  Upcoming
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./pages/today">
+                <Link className="nav-link" to="pages/today">
                   Today Task
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
@@ -62,9 +66,10 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <div>
-        <TodayTask />
-      </div>
+      <Routes>
+        <Route path="pages/upcoming" element={<Upcoming />} />
+        <Route path="pages/today" element={<TodayTask />} />
+      </Routes>
     </>
   );
 };
