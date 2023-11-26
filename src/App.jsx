@@ -151,7 +151,7 @@ function App() {
             </div>
           </nav>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus fuga, harum laborum similique impedit quas ut suscipit? Nam, numquam quia totam labore inventore cumque fuga aspernatur possimus laboriosam, placeat quis.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus fuga, harum laborum similique impedit quas ut suscipit? Nam, numquam quia totam labore inventore cumque fuga aspernatur possimus laboriosam, placeat quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cupiditate asperiores accusamus necessitatibus similique, non amet expedita adipisci libero facilis perferendis sunt! Cumque et illo vitae debitis eius, fugit saepe?
           </p>
           <div>
           <div className="col-md-9 ">
