@@ -6,7 +6,7 @@ const UpcomingReward = () => {
           <div className="">
             <div className="card">
               <div className="card-body">
-                <p className="card-title display-6 lead">Today's Reward</p>
+                <p className="card-title display-6 lead">Today s Reward</p>
                 <hr />
                 <div style={{height: "240px"}} className="overflow-auto lead">
                   <Upcoming />
