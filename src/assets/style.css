@@ -10795,7 +10795,8 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 }
 
 .wrapper {
-    width: 100%
+    width: 100%;
+    /* background-color: #FFD9B5; */
 }
 
 #sidebar {
@@ -10967,4 +10968,3 @@ a[data-toggle=collapse] {
 .low .card-header h2 {
   color: white;
 }
-  

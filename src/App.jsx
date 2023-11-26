@@ -1,7 +1,11 @@
 import "./assets/style.css";
 import { useState } from "react";
 import FullHeightComponent from "./components/FullHeight";
-import Task from "./components/task";
+import "bootstrap/dist/css/bootstrap.css";
+import UpcomingReward from "./components/todayReward";
+import UpcomingTask from "./components/todayTask";
+import UpcomingTomorrow from "./components/UpcomingTomorrow";
+import UpcomingOther from "./components/UpcomingOther";
 
 function App() {
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -11,7 +15,7 @@ function App() {
   };
 
   return (
-    <>
+    <div>
       <FullHeightComponent />
       <div className="wrapper d-flex align-items-stretch">
         <nav id="sidebar" className={sidebarActive ? "active" : ""}>
@@ -144,14 +148,28 @@ function App() {
             </div>
           </nav>
           <h2 className="mb-4">Sidebar #01</h2>
-          <p>The Task list is organized into three priority levels: High, Medium, and Low, ensuring focused attention and efficient execution based on importance and urgency.</p>
-          <div>
-            <Task/>
+
+          {/* Jerrico part */}
+          <div className="row">
+            <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+              <UpcomingTask />
+            </div>
+            <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+              <UpcomingReward />
+            </div>
+            <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+              <UpcomingTomorrow />
+            </div>
+            <div className="col-sm-6 mb-3 mb-sm-0 pb-3">
+              <UpcomingOther />
+            </div>
           </div>
+
+          {/*End of Jerrico part */}
         </div>
       </div>
       <div></div>
-    </>
+    </div>
   );
 }
 
