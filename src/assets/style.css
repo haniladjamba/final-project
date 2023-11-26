@@ -506,7 +506,7 @@ pre code {
     padding-right: 10px;
     padding-left: 10px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 @media(min-width: 576px) {
@@ -4810,7 +4810,7 @@ input[type=submit].btn-block,input[type=reset].btn-block,input[type=button].btn-
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #C3ACD0;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem
@@ -10812,7 +10812,7 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 
 .wrapper {
     width: 100%;
-    /* background-color: #FFD9B5; */
+    background-color: #F7EFE5;
 }
 
 #sidebar {
@@ -10859,7 +10859,7 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 #sidebar ul li a {
     padding: 10px 0;
     display: block;
-    color: rgba(255,255,255,.8);
+    color: #121212;
     border-bottom: 1px solid rgba(255,255,255,.1)
 }
 
@@ -10869,7 +10869,7 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 
 #sidebar ul li.active>a {
     background: 0 0;
-    color: #f8b739
+    color: #121212
 }
 
 @media(max-width: 991.98px) {

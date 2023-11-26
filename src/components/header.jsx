@@ -15,10 +15,11 @@ const Header = () => {
           <button
             type="button"
             id="sidebarCollapse"
-            className="btn btn-primary"
+            className=""
             onClick={handleSidebarToggle}
+            style={{backgroundColor: "#7743DB"}}
           >
-            <i className="fa fa-bars" />
+            <i className="bi bi-list" />
             <span className="sr-only">Toggle Menu</span>
           </button>
           <button
@@ -30,7 +31,7 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i className="fa fa-bars" />
+            <i className="bi bi-list" />
           </button>
           <div
             className="navbar-collapse collapse"

@@ -34,7 +34,7 @@ const TodoApp1 = () => {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"></link>
   return (
     
-    <div className="container m-5 p-2 rounded mx-auto bg-light shadow">
+    <div style={{backgroundColor: "#C3ACD0"}} className="container m-5 p-2 rounded mx-auto shadow">
       {/* ... (unchanged code) */}
       <h6>Reward</h6>
       <div className="row m-1 p-3">
@@ -50,7 +50,7 @@ const TodoApp1 = () => {
               />
             </div>
             <div className="col-auto m-0 px-2 d-flex align-items-center">
-              <button type="button" className="btn btn-primary" onClick={addTask}>
+              <button type="button" style={{backgroundColor: "#7743DB"}} onClick={addTask}>
                 Add
               </button>
             </div>
@@ -86,7 +86,7 @@ const TodoApp1 = () => {
                 </button>
                 <button
                   type="button"
-                  className="btn btn-secondary btn-sm mx-2"
+                  className="btn btn-warning btn-sm mx-2"
                   onClick={() => {
                     const newValue = prompt('Enter the new value:');
                     if (newValue !== null) {

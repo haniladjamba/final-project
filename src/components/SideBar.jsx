@@ -11,7 +11,7 @@ const SideBar = () => {
 
   return (
     <>
-      <nav id="sidebar" className={sidebarActive ? "active" : ""}>
+      <nav  style={{backgroundColor: "#C3ACD0"}} id="sidebar" className={sidebarActive ? "active" : ""}>
         <div className="p-4 pt-5">
           <a
             href="#"
@@ -24,7 +24,7 @@ const SideBar = () => {
                 href="#homeSubmenu"
                 data-toggle="collapse"
                 aria-expanded="false"
-                className="dropdown-toggle"
+                className="dropdown-toggle "
               >
                 Home
               </a>
@@ -41,14 +41,14 @@ const SideBar = () => {
               </ul>
             </li>
             <li>
-              <a href="#">Today's Task</a>
+              <a href="#" className="">Today's Task</a>
             </li>
             <li>
               <a
                 href="#pageSubmenu"
                 data-toggle="collapse"
                 aria-expanded="false"
-                className="dropdown-toggle collapsed"
+                className="dropdown-toggle collapsed "
               >
                 Pages
               </a>
@@ -69,14 +69,14 @@ const SideBar = () => {
               </ul>
             </li>
             <li>
-              <a href="#">Portfolio</a>
+              <a href="#" className="">Portfolio</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#" className="">Contact</a>
             </li>
           </ul>
           <div className="footer">
-            <p>
+            <p className="">
               Copyright © 2023 All rights reserved | This template is made with
               <i className="icon-heart" aria-hidden="true" /> by
               <a href="#" target="_blank">
