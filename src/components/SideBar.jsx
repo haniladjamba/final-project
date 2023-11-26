@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Header from "./header";
+import Show from "./renderer/show";
 
 const SideBar = () => {
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -46,7 +47,21 @@ const SideBar = () => {
         </div>
       </nav>
       <div id="content" className="p-4 p-md-5">
-        <Header />
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="container-fluid">
+            <button
+              type="button"
+              id="sidebarCollapse"
+              className="btn btn-primary"
+              onClick={handleSidebarToggle}
+            >
+              <i className="fa fa-bars" />
+              <span className="sr-only">Toggle Menu</span>
+            </button>
+            <Header />
+          </div>
+        </nav>
+        <Show />
       </div>
     </>
   );
