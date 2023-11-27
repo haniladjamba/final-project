@@ -1,19 +1,21 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable no-unused-vars */
 import "./assets/style.css";
+<<<<<<< HEAD
 import { useState } from "react";
 import FullHeightComponent from "./components/FullHeight";
 import Reward from "./components/Reward";
+=======
+import "bootstrap/dist/css/bootstrap.css";
+import SideBar from "./components/SideBar";
+>>>>>>> b981de91cd8d1b3fa7cee9a380b57f5745b805c5
 
 function App() {
-  const [sidebarActive, setSidebarActive] = useState(false);
-
-  const handleSidebarToggle = () => {
-    setSidebarActive((prev) => !prev);
-  };
-
   return (
     <>
-      <FullHeightComponent />
+      {/* ... (unchanged code) */}
       <div className="wrapper d-flex align-items-stretch">
+<<<<<<< HEAD
         <nav id="sidebar" className={sidebarActive ? "active" : ""}>
           <div className="p-4 pt-5">
             <a
@@ -150,6 +152,9 @@ function App() {
             <Reward />
           </div>
         </div>
+=======
+        <SideBar />
+>>>>>>> b981de91cd8d1b3fa7cee9a380b57f5745b805c5
       </div>
     </>
   );

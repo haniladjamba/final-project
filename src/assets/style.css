@@ -1,3 +1,17 @@
+.big-box {
+    width: 300px;
+    height: 200px;
+    background-color: lightblue;
+    border: 1px solid darkblue;
+    margin: 10px;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+
 @font-face {
   font-family: "Poppins";
   font-style: normal;
@@ -487,8 +501,8 @@ pre code {
 
 .container {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
     margin-right: auto;
     margin-left: auto
 }
@@ -1085,7 +1099,9 @@ pre code {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
-        max-width: 50%
+        max-width: 50%;
+        
+        
     }
 
     .col-md-7 {
