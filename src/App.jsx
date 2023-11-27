@@ -4,6 +4,10 @@ import "./assets/style.css";
 import "bootstrap/dist/css/bootstrap.css";
 import SideBar from "./components/SideBar";
 import './config/firebase';
+import './components/database/sendData/TestSend'
+import FirebaseDemo from "./components/database/sendData/TestSend";
+import NewData from "./components/database/getNew";
+import TodayTask from "./components/pages/today";
 
 
 function App() {
