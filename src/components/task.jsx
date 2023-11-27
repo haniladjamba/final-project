@@ -1,7 +1,7 @@
 const Task = () => {
   return (
     <div>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus soluta doloremque dolorem, fuga, dolor similique voluptas architecto nemo cupiditate molestias mollitia eum veniam inventore, quod magnam fugiat modi officiis laborum?</p>
+      <p>The task list is organized into three priority levels: High, Medium, and Low, ensuring focused attention and efficient execution based on importance and urgency.</p>
       <meta charSet="UTF-8" />
       <title>Task Priority</title>
       <link rel="stylesheet" href="styles.css" />
@@ -13,9 +13,9 @@ const Task = () => {
             </div>
             <div className="card-body">
               {/* High priority tasks here */}
-              <p>Make payment to Tokopedia</p>
-              <p>Office Rent</p>
-              <p>Office grocery shopping</p>
+              <li>Make payment to Tokopedia</li>
+              <li>Office Rent</li>
+              <li>Office grocery shopping</li>
               {/* ... */}
             </div>
           </div>
@@ -27,8 +27,8 @@ const Task = () => {
             </div>
             <div className="card-body">
               {/* Medium priority tasks here */}
-              <p>Final Project Front-End</p>
-              <p>Final Project System Analysis and Design</p>
+              <li>Final Project Front-End</li>
+              <li>Final Project System Analysis and Design</li>
               {/* ... */}
             </div>
           </div>
@@ -40,8 +40,8 @@ const Task = () => {
             </div>
             <div className="card-body">
               {/* Low priority tasks here */}
-              <p>Ask for Lunch to Clients</p>
-              <p>Create weekly tasks plan</p>
+              <li>Ask for Lunch to Clients</li>
+              <li>Create weekly tasks plan</li>
               {/* ... */}
             </div>
           </div>

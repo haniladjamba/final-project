@@ -10922,3 +10922,71 @@ a[data-toggle=collapse] {
 .footer p {
     color: rgba(255,255,255,.5)
 }
+
+/*Task color*/
+
+/* Priority colors */
+.high .card-header {
+  background-color: #C3ACD0;
+}
+
+.medium .card-header {
+  background-color: #C3ACD0;
+}
+
+.low .card-header {
+  background-color: #C3ACD0;
+}
+
+/* Card body - Bulleted list */
+.card-body p {
+  margin: 8px 0;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* High priority card background */
+.priority.high .card {
+    background-color: #C3ACD0; /* Example background color for high priority */
+  }
+  
+  /* Other priority cards background */
+  .priority:not(.high) .card {
+    background-color: #C3ACD0; /* Example background color for other priorities */
+  }
+
+  /* Priority text color */
+.card-header h2 {
+    color: black; /* Default text color */
+  }
+  
+  .priority.high .card-header h2 {
+    color: red; /* Red text color for high priority */
+  }
+  
+  .priority.medium .card-header h2 {
+    color: orange; /* Orange text color for medium priority */
+  }
+  
+  .priority.low .card-header h2 {
+    color: green; /* Green text color for low priority */
+  }
+  
+  /* Other card text color */
+  .card-body p {
+    color: black; /* Default text color */
+  }
+  
+  .priority.high .card-body p {
+    color: red; /* Red text color for high priority tasks */
+  }
+  
+  .priority.medium .card-body p {
+    color: orange; /* Orange text color for medium priority tasks */
+  }
+  
+  .priority.low .card-body p {
+    color: green; /* Green text color for low priority tasks */
+  }
+
+/*End Task color*/
