@@ -14,7 +14,7 @@ const SideBar = () => {
 
   return (
     <>
-      <nav id="sidebar" className={sidebarActive ? "active" : ""}>
+      <nav style={{backgroundColor: "#C3ACD0"}} id="sidebar" className={sidebarActive ? "active" : ""}>
         <div className="p-4 pt-5">
           <a
             href="#"
@@ -22,6 +22,7 @@ const SideBar = () => {
             style={{ backgroundImage: "url(images/logo.jpg)" }}
           />
           <ul className="list-unstyled components mb-5">
+
             <li className="Active">
               <Link to="pages/upcoming">Upcoming</Link>
             </li>
@@ -36,6 +37,7 @@ const SideBar = () => {
             </li>
           </ul>
           <div className="footer">
+
           </div>
         </div>
       </nav>

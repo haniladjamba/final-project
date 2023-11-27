@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import TodoApp from "../todoapp";
 import TodoApp1 from "../todoapp1";
@@ -11,7 +12,7 @@ const TodayTask = () => {
   const addTodoAppContainer = () => {
     const newTodoAppContainer = (
       <Container>
-      <Row>
+      <Row id="row">
         <Col md={10} className="d-flex align-items-center">
           <TodoApp />
         </Col>
@@ -29,11 +30,10 @@ const TodayTask = () => {
 
   return (
     <>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus fuga,
-        harum laborum similique impedit quas ut suscipit? Nam, numquam quia
-        totam labore inventore cumque fuga aspernatur possimus laboriosam,
-        placeat quis.
+      <p className="lead">
+        In this app you can create a list of things that's you want to do. you can set a reminder for the list,
+        and you can get a reward if you complete your task on time.
+         why the reward? so that you can get motivate to do your task and you can get more productive in the future
       </p>
       <div>
         <div className="col-md-9 ">
@@ -41,6 +41,7 @@ const TodayTask = () => {
             type="button"
             className="btn btn-primary"
             onClick={addTodoAppContainer}
+            style={{backgroundColor: "#7743DB"}}
           >
             Add
           </button>
