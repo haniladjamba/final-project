@@ -47,7 +47,14 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff
+    background-color: #fff;
+    /* costume scrollbar */
+    --sb-track-color: #301e67;
+    --sb-thumb-color: #b6eada;
+    --sb-size: 10px;
+
+    scrollbar-color: var(--sb-thumb-color) 
+                    var(--sb-track-color);
 }
 
 [tabindex="-1"]:focus {
@@ -63,7 +70,7 @@ hr {
 
 h1,h2,h3,h4,h5,h6 {
     margin-top: 0;
-    margin-bottom: .5rem
+    margin-bottom: .5rem;
 }
 
 p {
@@ -504,7 +511,7 @@ pre code {
     padding-right: 10px;
     padding-left: 10px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 @media(min-width: 576px) {
@@ -4808,7 +4815,7 @@ input[type=submit].btn-block,input[type=reset].btn-block,input[type=button].btn-
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #C3ACD0;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem
@@ -10809,7 +10816,9 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 }
 
 .wrapper {
-    width: 100%
+    width: 100%;
+    /* background-color: #F7EFE5; : origin color*/ 
+    background-color: #03001C;
 }
 
 #sidebar {
@@ -10856,17 +10865,17 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 #sidebar ul li a {
     padding: 10px 0;
     display: block;
-    color: rgba(255,255,255,.8);
+    color: #B6EADA;
     border-bottom: 1px solid rgba(255,255,255,.1)
 }
 
 #sidebar ul li a:hover {
-    color: #f8b739
+    color: #5B8FB9  
 }
 
 #sidebar ul li.active>a {
     background: 0 0;
-    color: #f8b739
+    color: #B6EADA
 }
 
 @media(max-width: 991.98px) {
@@ -10921,3 +10930,88 @@ a[data-toggle=collapse] {
 .footer p {
     color: rgba(255,255,255,.5)
 }
+
+/*Task color*/
+
+/* Priority colors */
+.high .card-header {
+  background-color: #301E67;
+}
+
+.medium .card-header {
+  background-color: #301E67;
+}
+
+.low .card-header {
+  background-color: #301E67;
+}
+
+/* Card body - Bulleted list */
+.card-body p {
+  margin: 8px 0;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* High priority card background */
+.priority.high .card {
+    background-color: #301E67; /* Example background color for high priority */
+  }
+  
+  /* Other priority cards background */
+  .priority:not(.high) .card {
+    background-color: #301E67; /* Example background color for other priorities */
+  }
+
+  /* Priority text color */
+.card-header h2 {
+    color: black; /* Default text color */
+  }
+  
+  .priority.high .card-header h2 {
+    color: red; /* Red text color for high priority */
+  }
+  
+  .priority.medium .card-header h2 {
+    color: orange; /* Orange text color for medium priority */
+  }
+  
+  .priority.low .card-header h2 {
+    color: green; /* Green text color for low priority */
+  }
+  
+  /* Other card text color */
+  .card-body p {
+    color: white; /* Default text color */
+  }
+  
+  .priority.high .card-body p {
+    color: red; /* Red text color for high priority tasks */
+  }
+  
+  .priority.medium .card-body p {
+    color: orange; /* Orange text color for medium priority tasks */
+  }
+  
+  .priority.low .card-body p {
+    color: green; /* Green text color for low priority tasks */
+  }
+
+/*End Task color*/
+
+/* Costume scrollbar */
+
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1px;
+    border: 3px solid #301e67;
+  }

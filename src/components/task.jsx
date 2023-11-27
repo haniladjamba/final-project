@@ -1,47 +1,51 @@
 const Task = () => {
   return (
     <div>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus soluta doloremque dolorem, fuga, dolor similique voluptas architecto nemo cupiditate molestias mollitia eum veniam inventore, quod magnam fugiat modi officiis laborum?</p>
+      <p style={{color: "#B6EADA"}} className="lead">
+        The task list is organized into three priority levels: High, Medium, and Low.
+      Ensuring focused attention and efficient execution based on importance and urgency.
+      This can create a efficient work flow. and by making a task priority, you can finish it more quickly.
+      </p>
       <meta charSet="UTF-8" />
       <title>Task Priority</title>
       <link rel="stylesheet" href="styles.css" />
       <div className="priority-box">
-        <div className="priority high">
+        <div className="priority high pb-3">
           <div className="card">
             <div className="card-header">
               <h2>High Priority</h2>
             </div>
-            <div className="card-body">
+            <div className="card-body" style={{color: "#B6EADA"}}>
               {/* High priority tasks here */}
-              <p>Make payment to Tokopedia</p>
-              <p>Office Rent</p>
-              <p>Office grocery shopping</p>
+              <li>Make payment to Tokopedia</li>
+              <li>Office Rent</li>
+              <li>Office grocery shopping</li>
               {/* ... */}
             </div>
           </div>
         </div>
-        <div className="priority medium">
+        <div className="priority medium pb-3">
           <div className="card">
             <div className="card-header">
               <h2>Medium Priority</h2>
             </div>
-            <div className="card-body">
+            <div className="card-body" style={{color: "#B6EADA"}}>
               {/* Medium priority tasks here */}
-              <p>Final Project Front-End</p>
-              <p>Final Project System Analysis and Design</p>
+              <li>Final Project Front-End</li>
+              <li>Final Project System Analysis and Design</li>
               {/* ... */}
             </div>
           </div>
         </div>
-        <div className="priority low">
+        <div className="priority low pb-3">
           <div className="card">
             <div className="card-header">
               <h2>Low Priority</h2>
             </div>
-            <div className="card-body">
+            <div className="card-body" style={{color: "#B6EADA"}}>
               {/* Low priority tasks here */}
-              <p>Ask for Lunch to Clients</p>
-              <p>Create weekly tasks plan</p>
+              <li>Ask for Lunch to Clients</li>
+              <li>Create weekly tasks plan</li>
               {/* ... */}
             </div>
           </div>

@@ -14,7 +14,7 @@ const SideBar = () => {
 
   return (
     <>
-      <nav id="sidebar" className={sidebarActive ? "active" : ""}>
+      <nav style={{backgroundColor: "#301E67"}} id="sidebar" className={sidebarActive ? "active" : ""}>
         <div className="p-4 pt-5">
           <a
             href="#"
@@ -22,6 +22,7 @@ const SideBar = () => {
             style={{ backgroundImage: "url(images/logo.jpg)" }}
           />
           <ul className="list-unstyled components mb-5">
+
             <li className="Active">
               <Link to="pages/upcoming">Upcoming</Link>
             </li>
@@ -36,19 +37,21 @@ const SideBar = () => {
             </li>
           </ul>
           <div className="footer">
+
           </div>
         </div>
       </nav>
       <div id="content" className="p-4 p-md-5">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav style={{backgroundColor: "#301E67"}} className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
             <button
               type="button"
               id="sidebarCollapse"
-              className="btn btn-primary"
+              className="btn btn-dark"
               onClick={handleSidebarToggle}
+              style={{backgroundColor: "#5B8FB9"}}
             >
-              <i className="fa fa-bars" />
+              <i className="bi bi-list" />
               <span className="sr-only">Toggle Menu</span>
             </button>
             <Header />

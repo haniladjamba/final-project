@@ -34,9 +34,9 @@ const TodoApp = () => {
   };
 
   return (
-    <div className="container m-5 p-2 rounded mx-auto bg-light shadow">
+    <div style={{backgroundColor: "#301E67"}} className="container m-5 p-2 rounded mx-auto shadow">
       {/* ... (unchanged code) */}
-      <h2>Task</h2>
+      <h2 style={{color: "#B6EADA"}}>Task</h2>
       <div className="row m-1 p-3">
         <div className="col col-11 mx-auto">
           <div className="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center">
@@ -50,7 +50,7 @@ const TodoApp = () => {
               />
             </div>
             <div className="col-auto m-0 px-2 d-flex align-items-center">
-              <button type="button" className="btn btn-primary" onClick={addTask}>
+              <button type="button" style={{backgroundColor: "#5B8FB9"}} onClick={addTask}>
                 Add
               </button>
             </div>
@@ -68,6 +68,7 @@ const TodoApp = () => {
                   readOnly
                   value={task}
                   title={task}
+                  style={{color: "#B6EADA"}}
                 />
               </div>
               <div className="col-auto m-0 d-flex align-items-center">
@@ -86,7 +87,7 @@ const TodoApp = () => {
                 </button>
                 <button
                   type="button"
-                  className="btn btn-secondary btn-sm mx-2"
+                  className="btn btn-warning btn-sm mx-2"
                   onClick={() => {
                     const newValue = prompt('Enter the new value:');
                     if (newValue !== null) {

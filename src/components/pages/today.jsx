@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import TodoApp from "../todoapp";
 import TodoApp1 from "../todoapp1";
@@ -11,7 +12,7 @@ const TodayTask = () => {
   const addTodoAppContainer = () => {
     const newTodoAppContainer = (
       <Container>
-      <Row>
+      <Row id="row">
         <Col md={10} className="d-flex align-items-center">
           <TodoApp />
         </Col>
@@ -29,18 +30,18 @@ const TodayTask = () => {
 
   return (
     <>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus fuga,
-        harum laborum similique impedit quas ut suscipit? Nam, numquam quia
-        totam labore inventore cumque fuga aspernatur possimus laboriosam,
-        placeat quis.
+      <p className="lead" style={{color: "#B6EADA"}}>
+        In this page you can add, delete, and edit you task you want to do.
+        You can also add a reward for your task.
+        By doing so, you can get more motivated and be more productive by the end of the day.
       </p>
       <div>
         <div className="col-md-9 ">
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn btn-dark"
             onClick={addTodoAppContainer}
+            style={{backgroundColor: "#5B8FB9"}}
           >
             Add
           </button>

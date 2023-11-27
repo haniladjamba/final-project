@@ -30,7 +30,7 @@ import { useState } from 'react';
     return (
         <div className="todo-list">
             <div className='pb-3'>
-                <button className="btn btn-secondary" onClick={handleAddTodo}>
+                <button style={{backgroundColor: "#5B8FB9"}} className="btn btn-secondary" onClick={handleAddTodo}>
                     Add To-do
                 </button>
             </div>
@@ -39,20 +39,20 @@ import { useState } from 'react';
         </div>
         <hr />
 
-        <ul className="todo-list__list">
+        <ul className="todo-list__list" style={{color: "#B6EADA"}}>
             {todos.map((todo) => (
             <li key={todo.id} className={`todo-list__item ${todo.isComplete ? 'todo-list__item--complete' : ''}`}>
                 <span className="todo-list__complete-btn" onClick={() => handleCompleteTodo(todo.id)}>
-                &#10003;
+                
                 </span>
                 <span className="todo-list__value">{todo.value}</span>
                 <span className="todo-list__delete-btn" onClick={() => handleDeleteTodo(todo.id)}>
-                &times;
+                
                 </span>
             </li>
             ))}
         </ul>
-        <ul>
+        <ul style={{color:"#B6EADA"}}>
             <li>
                 finish the Front-End final project
             </li>
