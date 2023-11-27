@@ -3,6 +3,7 @@
 import "./assets/style.css";
 import "bootstrap/dist/css/bootstrap.css";
 import SideBar from "./components/SideBar";
+import './config/firebase';
 
 
 function App() {
