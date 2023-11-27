@@ -14,31 +14,31 @@ const Header = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <i className="fa fa-bars" />
+        <i className="bi bi-list" />
       </button>
       <div
         className="navbar-collapse collapse"
         id="navbarSupportedContent"
         style={{}}
       >
-        <ul className="nav navbar-nav ml-auto">
+        <ul className="nav navbar-nav ml-auto" style={{borderRadius: "5px"}}>
           <li className="nav-item active">
-            <Link className="nav-link" to="pages/upcoming">
+            <Link style={{color: "#B6EADA"}} className="nav-link" to="pages/upcoming">
               Upcoming
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="pages/today">
+            <Link style={{color: "#B6EADA"}} className="nav-link" to="pages/today">
               Today Task
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="pages/priority">
+            <Link style={{color: "#B6EADA"}} className="nav-link" to="pages/priority">
               Priority
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="pages/reward">
+            <Link style={{color: "#B6EADA"}} className="nav-link" to="pages/reward">
               Reward
             </Link>
           </li>

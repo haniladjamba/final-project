@@ -14,6 +14,12 @@ const Reward = () => {
  };
 
  return (
+  <div>
+  <p style={{color: "#B6EADA"}} className="lead">in here you can see all the reward you can get if you complete a task.
+    This can make you more motivated to do your task.
+    So the more you do complete your task, the more reward you can get.
+
+  </p>
     <div className="reward-container">
       <h2>My Rewards</h2>
 
@@ -24,7 +30,7 @@ const Reward = () => {
           <div className="task-id">
             Task ID: {reward.id}
             <button
-              className="claim-button"
+              className="claim-button btn btn-success"
               onClick={() => handleClaim(reward.id)}
             >
               Claim
@@ -33,6 +39,7 @@ const Reward = () => {
         </div>
       ))}
     </div>
+  </div>
  );
 };
 

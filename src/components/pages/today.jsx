@@ -30,18 +30,18 @@ const TodayTask = () => {
 
   return (
     <>
-      <p className="lead">
-        In this app you can create a list of things that's you want to do. you can set a reminder for the list,
-        and you can get a reward if you complete your task on time.
-         why the reward? so that you can get motivate to do your task and you can get more productive in the future
+      <p className="lead" style={{color: "#B6EADA"}}>
+        In this page you can add, delete, and edit you task you want to do.
+        You can also add a reward for your task.
+        By doing so, you can get more motivated and be more productive by the end of the day.
       </p>
       <div>
         <div className="col-md-9 ">
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn btn-dark"
             onClick={addTodoAppContainer}
-            style={{backgroundColor: "#7743DB"}}
+            style={{backgroundColor: "#5B8FB9"}}
           >
             Add
           </button>

@@ -34,9 +34,9 @@ const TodoApp1 = () => {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"></link>
   return (
     
-    <div style={{backgroundColor: "#C3ACD0"}} className="container m-5 p-2 rounded mx-auto shadow">
+    <div style={{backgroundColor: "#301E67"}} className="container m-5 p-2 rounded mx-auto shadow">
       {/* ... (unchanged code) */}
-      <h6>Reward</h6>
+      <h6 style={{color: "#B6EADA"}}>Reward</h6>
       <div className="row m-1 p-3">
         <div className="col col-11 mx-auto">
           <div className="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center">
@@ -50,7 +50,7 @@ const TodoApp1 = () => {
               />
             </div>
             <div className="col-auto m-0 px-2 d-flex align-items-center">
-              <button type="button" style={{backgroundColor: "#7743DB"}} onClick={addTask}>
+              <button type="button" style={{backgroundColor: "#5B8FB9"}} onClick={addTask}>
                 Add
               </button>
             </div>
@@ -68,6 +68,7 @@ const TodoApp1 = () => {
                   readOnly
                   value={task}
                   title={task}
+                  style={{color: "#B6EADA"}}
                 />
               </div>
               <div className="col-auto m-0 d-flex align-items-center">

@@ -47,7 +47,14 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff
+    background-color: #fff;
+    /* costume scrollbar */
+    --sb-track-color: #301e67;
+    --sb-thumb-color: #b6eada;
+    --sb-size: 10px;
+
+    scrollbar-color: var(--sb-thumb-color) 
+                    var(--sb-track-color);
 }
 
 [tabindex="-1"]:focus {
@@ -63,7 +70,7 @@ hr {
 
 h1,h2,h3,h4,h5,h6 {
     margin-top: 0;
-    margin-bottom: .5rem
+    margin-bottom: .5rem;
 }
 
 p {
@@ -10810,7 +10817,8 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 
 .wrapper {
     width: 100%;
-    background-color: #F7EFE5;
+    /* background-color: #F7EFE5; : origin color*/ 
+    background-color: #03001C;
 }
 
 #sidebar {
@@ -10857,17 +10865,17 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 #sidebar ul li a {
     padding: 10px 0;
     display: block;
-    color: #121212;
+    color: #B6EADA;
     border-bottom: 1px solid rgba(255,255,255,.1)
 }
 
 #sidebar ul li a:hover {
-    color: #f8b739
+    color: #5B8FB9  
 }
 
 #sidebar ul li.active>a {
     background: 0 0;
-    color: #121212
+    color: #B6EADA
 }
 
 @media(max-width: 991.98px) {
@@ -10927,15 +10935,15 @@ a[data-toggle=collapse] {
 
 /* Priority colors */
 .high .card-header {
-  background-color: #C3ACD0;
+  background-color: #301E67;
 }
 
 .medium .card-header {
-  background-color: #C3ACD0;
+  background-color: #301E67;
 }
 
 .low .card-header {
-  background-color: #C3ACD0;
+  background-color: #301E67;
 }
 
 /* Card body - Bulleted list */
@@ -10947,12 +10955,12 @@ a[data-toggle=collapse] {
 
 /* High priority card background */
 .priority.high .card {
-    background-color: #C3ACD0; /* Example background color for high priority */
+    background-color: #301E67; /* Example background color for high priority */
   }
   
   /* Other priority cards background */
   .priority:not(.high) .card {
-    background-color: #C3ACD0; /* Example background color for other priorities */
+    background-color: #301E67; /* Example background color for other priorities */
   }
 
   /* Priority text color */
@@ -10974,7 +10982,7 @@ a[data-toggle=collapse] {
   
   /* Other card text color */
   .card-body p {
-    color: black; /* Default text color */
+    color: white; /* Default text color */
   }
   
   .priority.high .card-body p {
@@ -10990,3 +10998,20 @@ a[data-toggle=collapse] {
   }
 
 /*End Task color*/
+
+/* Costume scrollbar */
+
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1px;
+    border: 3px solid #301e67;
+  }
