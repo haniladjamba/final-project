@@ -31,15 +31,11 @@ const SideBar = () => {
             <li>
               <Link to="pages/priority">Task Priority</Link>
             </li>
+            <li>
+              <Link to="pages/reward">Reward</Link>
+            </li>
           </ul>
           <div className="footer">
-            <p>
-              Copyright © 2023 All rights reserved | This template is made with
-              <i className="icon-heart" aria-hidden="true" /> by
-              <a href="#" target="_blank">
-                Colorlib.com
-              </a>
-            </p>
           </div>
         </div>
       </nav>

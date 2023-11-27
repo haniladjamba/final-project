@@ -36,6 +36,11 @@ const Header = () => {
               Priority
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="pages/reward">
+              Reward
+            </Link>
+          </li>
         </ul>
       </div>
     </>
