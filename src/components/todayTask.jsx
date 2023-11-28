@@ -15,7 +15,7 @@ const UpcomingTask = () => {
             </p>
             <hr />
             <div style={{ height: "240px" }} className="overflow-auto lead">
-              <Upcoming />
+              <Upcoming endpoint="today" />
               <ul style={{ color: "#B6EADA" }}>
                 <li>
                   <GetDataToday />

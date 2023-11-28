@@ -1,7 +1,11 @@
 import { useState } from "react";
-import PostData from "./database/sendData/Send";
+import propTypes from 'prop-types';
 
-const TodoList = () => {
+const Upcoming = ({ endpoint }) => {
+  Upcoming.propTypes = {
+    endpoint: propTypes.string,
+  }
+
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [details, setDetails] = useState({
@@ -14,7 +18,7 @@ const TodoList = () => {
     const { todo, reward } = details;
 
     const res = await fetch(
-      "https://fe-final-project-d25ae-default-rtdb.firebaseio.com/task/today.json",
+      `https://fe-final-project-d25ae-default-rtdb.firebaseio.com/task/${endpoint}.json`,
       {
         method: "POST",
         headers: {
@@ -98,4 +102,4 @@ const TodoList = () => {
   );
 };
 
-export default TodoList;
+export default Upcoming;
