@@ -1,8 +1,31 @@
 import { useState } from "react";
+import PostData from "./database/sendData/Send";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [details, setDetails] = useState({
+    todo: "",
+  });
+
+  const PostData = async (e) => {
+    e.preventDefault();
+
+    const { todo, reward } = details;
+
+    const res = await fetch(
+      "https://fe-final-project-d25ae-default-rtdb.firebaseio.com/task/today.json",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          todo,
+        }),
+      }
+    );
+  };
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -36,7 +59,7 @@ const TodoList = () => {
         <button
           style={{ backgroundColor: "#5B8FB9" }}
           className="btn btn-secondary"
-          onClick={handleAddTodo}
+          onClick={PostData}
         >
           Add To-do
         </button>
@@ -46,8 +69,7 @@ const TodoList = () => {
           type="text"
           className="form-control"
           placeholder="Add new"
-          value={inputValue}
-          onChange={handleInputChange}
+          onChange={(e) => setDetails({...details,todo:e.target.value})}
         />
       </div>
       <hr />

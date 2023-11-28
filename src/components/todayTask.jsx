@@ -1,5 +1,5 @@
 import Upcoming from "./Upcoming";
-import UseGetData from "./database/GetTodayTask";
+import GetDataToday from "./database/GetTodayTask";
 
 const UpcomingTask = () => {
   return (
@@ -18,7 +18,7 @@ const UpcomingTask = () => {
               <Upcoming />
               <ul style={{ color: "#B6EADA" }}>
                 <li>
-                  <UseGetData />
+                  <GetDataToday />
                 </li>
               </ul>
             </div>

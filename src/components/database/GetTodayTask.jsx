@@ -1,64 +1,77 @@
 import { useEffect, useState } from "react";
-import { getDatabase, ref, child, get } from "firebase/database";
+import { getDatabase, ref, child, onValue } from "firebase/database";
 
-const UseGetData = () => {
-  // State to store the emailList
-  const [emailList, setEmailList] = useState([]);
+const GetDataToday = () => {
+  // State to store the reward and todo lists
+  const [rewardList, setRewardList] = useState([]);
+  const [todoList, setTodoList] = useState([]);
 
   useEffect(() => {
     console.log('useEffect is running');
 
-    const fetchData = async () => {
-      try {
-        const dbRef = ref(getDatabase());
-        const snapshot = await get(child(dbRef, 'haniform'));
+    const dbRef = ref(getDatabase(), 'task/today');
 
-        if (snapshot.exists()) {
-          const data = snapshot.val();
-          const uniqueEmails = new Set();
+    // Set up the onValue event listener
+    const unsubscribe = onValue(dbRef, (snapshot) => {
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+        const uniqueRewards = new Set();
+        const uniqueTodos = new Set();
 
-          // Iterate through each entry and extract the email
-          for (const key in data) {
-            if (Object.prototype.hasOwnProperty.call(data, key)) {
-              const emailEntry = data[key];
-              const entryEmail = emailEntry.email;
+        // Iterate through each entry and extract reward and todo
+        for (const key in data) {
+          if (Object.prototype.hasOwnProperty.call(data, key)) {
+            const entry = data[key];
+            
+            // Extract reward and add it to the rewardList
+            const entryReward = entry.reward;
+            if (!uniqueRewards.has(entryReward)) {
+              uniqueRewards.add(entryReward);
+            } else {
+              console.log(`Duplicate reward found for ${key}: ${entryReward}`);
+            }
 
-              // Check if the email is not in the emailList
-              if (!uniqueEmails.has(entryEmail)) {
-                // If not, add it to the emailList
-                uniqueEmails.add(entryEmail);
-              } else {
-                // If duplicate, you can choose to skip or handle accordingly
-                console.log(`Duplicate email found for ${key}: ${entryEmail}`);
-              }
+            // Extract todo and add it to the todoList
+            const entryTodo = entry.todo;
+            if (!uniqueTodos.has(entryTodo)) {
+              uniqueTodos.add(entryTodo);
+            } else {
+              console.log(`Duplicate todo found for ${key}: ${entryTodo}`);
             }
           }
-
-          // Convert the Set to an array and update the state
-          const uniqueEmailsArray = Array.from(uniqueEmails);
-          setEmailList(uniqueEmailsArray);
-        } else {
-          console.log('No data available');
         }
-      } catch (error) {
-        console.error(error);
-      }
-    };
 
-    fetchData();
+        // Convert the Sets to arrays and update the state
+        const uniqueRewardsArray = Array.from(uniqueRewards);
+        const uniqueTodosArray = Array.from(uniqueTodos);
+
+        setRewardList(uniqueRewardsArray);
+        setTodoList(uniqueTodosArray);
+      } else {
+        console.log('No data available');
+      }
+    });
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      unsubscribe();
+    };
   }, []); // Empty dependency array for running on mount
 
-  // Access emailList outside the useEffect
-  console.log('Email List outside useEffect:', emailList);
+  // Access rewardList and todoList outside the useEffect
+  console.log('Reward List outside useEffect:', rewardList);
+  console.log('Todo List outside useEffect:', todoList);
 
-  // You can also return the emailList if needed
+  // You can also return the lists if needed
   return (
-    <ul>
-      {emailList.map((email, index) => (
-        <li key={index}>{email}</li>
-      ))}
-    </ul>
+    <div>
+      <ul>
+        {todoList.map((todo, index) => (
+          <li key={index}>{todo}</li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
-export default UseGetData;
+export default GetDataToday;
