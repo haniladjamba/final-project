@@ -1,5 +1,5 @@
 import Upcoming from "./Upcoming";
-import GetOther from "./database/GetOtherTask";
+import GetDataOther from "./database/GetOtherTask";
 
 const UpcomingOther = () => {
   return (
@@ -10,10 +10,10 @@ const UpcomingOther = () => {
         </p>
         <hr />
         <div style={{ height: "240px" }} className="overflow-auto lead">
-          <Upcoming />
+          <Upcoming endpoint={"other"}/>
           <ul style={{ color: "#B6EADA" }}>
             <li>
-              <GetOther />
+              <GetDataOther />
             </li>
           </ul>
         </div>
