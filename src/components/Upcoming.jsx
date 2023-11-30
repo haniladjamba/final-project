@@ -1,13 +1,11 @@
-import { useState } from "react";
-import propTypes from 'prop-types';
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import { useState, useEffect } from "react";
 
-const Upcoming = ({ endpoint }) => {
-  Upcoming.propTypes = {
-    endpoint: propTypes.string,
-  }
-
+const TodoList = ({ endpoint }) => {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [priority, setPriority] = useState("");
   const [details, setDetails] = useState({
     todo: "",
   });
@@ -15,17 +13,20 @@ const Upcoming = ({ endpoint }) => {
   const PostData = async (e) => {
     e.preventDefault();
 
-    const { todo, reward } = details;
+    const { todo } = details;
+
+    // Combine task and priority
+    const taskWithPriority = priority !== "" ? `${todo} * Priority: ${priority}` : todo;
 
     const res = await fetch(
-      `https://fe-final-project-d25ae-default-rtdb.firebaseio.com/task/${endpoint}.json`,
+      `https://project-100aa-default-rtdb.firebaseio.com/task/${endpoint}.json`,
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json", // Fix the content type
         },
         body: JSON.stringify({
-          todo,
+          todo: taskWithPriority,
         }),
       }
     );
@@ -39,9 +40,10 @@ const Upcoming = ({ endpoint }) => {
     if (inputValue.trim()) {
       setTodos([
         ...todos,
-        { id: Date.now(), value: inputValue, isComplete: false },
+        { id: Date.now(), value: inputValue, priority: parseInt(priority), isComplete: false },
       ]);
       setInputValue("");
+      setPriority("");
     }
   };
 
@@ -73,8 +75,19 @@ const Upcoming = ({ endpoint }) => {
           type="text"
           className="form-control"
           placeholder="Add new"
-          onChange={(e) => setDetails({...details,todo:e.target.value})}
+          onChange={(e) => setDetails({ ...details, todo: e.target.value })}
         />
+
+        {/* Priority selection */}
+        <select
+          value={priority}
+          onChange={(e) => setPriority(e.target.value)}
+        >
+          <option value="">Select Priority</option>
+          <option value="1">Low Priority</option>
+          <option value="2">Medium Priority</option>
+          <option value="3">High Priority</option>
+        </select>
       </div>
       <hr />
 
@@ -91,6 +104,7 @@ const Upcoming = ({ endpoint }) => {
               onClick={() => handleCompleteTodo(todo.id)}
             ></span>
             <span className="todo-list__value">{todo.value}</span>
+            <span className="todo-list__priority">{`Priority: ${todo.priority}`}</span>
             <span
               className="todo-list__delete-btn"
               onClick={() => handleDeleteTodo(todo.id)}
@@ -102,4 +116,4 @@ const Upcoming = ({ endpoint }) => {
   );
 };
 
-export default Upcoming;
+export default TodoList;
