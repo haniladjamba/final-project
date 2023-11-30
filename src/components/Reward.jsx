@@ -12,7 +12,6 @@ const Reward = () => {
   // if (!rewards || !Array.isArray(rewards) || rewards.length === 0) {
   //   return <p>Loading rewards...</p>;
   // }
-  const [todoData, setTodoData] = useState({ todo: '', reward: '', priority: '' });
   const [rewards, setRewards] = useState([{ priority: '', reward: '', todo: '' }]);
 
   useEffect(() => {
@@ -26,23 +25,10 @@ const Reward = () => {
         const data = snapshot.val();
 
         // Filter data where priority is 1
-        const todoPriority1 = Object.values(data).find(item => item.priority === 1);
+        const todoPriority1 = Object.values(data)
+          .filter(item => item.priority === 1);
 
-        if (todoPriority1) {
-          // Update state with todo and reward values
-          setTodoData({
-            todo: todoPriority1.todo,
-            reward: todoPriority1.reward,
-            priority: todoPriority1.priority,
-          });
-          setRewards([
-            {
-              priority: todoPriority1.priority,
-              reward: todoPriority1.reward,
-              todo: todoPriority1.todo,
-            },
-          ]);
-        }
+        setRewards(todoPriority1);
       } catch (error) {
         console.error('Error fetching data from Firebase:', error);
       }
@@ -51,14 +37,16 @@ const Reward = () => {
     fetchData();
   }, []);
 
-  rewards.id = 1
+  rewards.id = 2
 
   console.log(rewards);
 
 
-const handleClaim = (id) => {
-     const newRewards = rewards.filter((rewards) => rewards.id !== id);
-     setRewards(newRewards);
+const handleClaim = (index) => {
+    // Create a new array excluding the randomly chosen item
+    const updatedRewards = rewards.filter((_, i) => i !== index);
+    setRewards(updatedRewards);
+    // Additional logic: perform any other actions needed when claiming a reward
   };
 
  return (
@@ -71,15 +59,15 @@ const handleClaim = (id) => {
     <div className="reward-container">
       <h2>My Rewards</h2>
 
-      {rewards.map((rewards) => (
-        <div className="reward-box" key={rewards.id}>
+      {rewards.map((rewards, index) => (
+        <div className="reward-box" key={index}>
           <h3>{rewards.reward}</h3>
           <p>{rewards.todo}</p>
           <div className="task-id">
             Task ID: {rewards.priority}
             <button
               className="claim-button btn btn-success"
-              onClick={() => handleClaim(rewards.id)}
+              onClick={() => handleClaim(index)}
             >
               Claim
             </button>
@@ -89,19 +77,6 @@ const handleClaim = (id) => {
     </div>
   </div>
  );
-};
-
-Reward.propTypes = {
-  rewards: propTypes.oneOfType([
-    propTypes.arrayOf(
-      propTypes.shape({
-        priority: propTypes.string.isRequired,
-        reward: propTypes.string.isRequired,
-        todo: propTypes.string.isRequired,
-      })
-    ),
-    propTypes.object, // Adjust this based on the actual structure of your rewards object
-  ]),
 };
 
 export default Reward;
