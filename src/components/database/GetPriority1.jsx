@@ -9,19 +9,33 @@ const GetPriority = ({ priority }) => {
     };
 
   const [todos, setTodos] = useState([]);
+  const [allData, setAllData] = useState([{ priority: '', reward: '', todo: '' }]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const db = getDatabase();
 
-        // Replace 'your-firebase-endpoint' with the actual endpoint where your data is stored
-        const dataRef = ref(db, 'task/other');
-        const snapshot = await get(dataRef);
-        const data = snapshot.val();
+         // Fetch data from 'other', 'today', and 'tomorrow'
+         const categories = ['other', 'today', 'tommorow'];
+         const allData = [];
+ 
+         for (const category of categories) {
+           const dataRef = ref(db, `task/${category}`);
+           const snapshot = await get(dataRef);
+           const data = snapshot.val();
+ 
+           // Extract data values and add them to the array
+           if (data) {
+             const categoryData = Object.values(data).map(item => ({ ...item, category }));
+             allData.push(...categoryData);
+           }
+         }
+
+        setAllData(allData);
 
         // Filter data where priority is 1
-        const priority1Todos = Object.values(data)
+        const priority1Todos = Object.values(allData)
           .filter(item => item.priority === priority);
 
         setTodos(priority1Todos);
@@ -37,7 +51,7 @@ const GetPriority = ({ priority }) => {
     <>
         {todos.map((todo, index) => (
           <li key={index}>
-            <strong>Todo:</strong> {todo.todo} | <strong>Reward:</strong> {todo.reward}
+            <strong>Todo:</strong> {todo.todo} | <strong>Reward:</strong> {todo.reward} | <strong>From:</strong> {todo.category}
           </li>
         ))}
     </>
