@@ -6,6 +6,7 @@ const TodoList = ({ endpoint }) => {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [priority, setPriority] = useState("");
+  const [reward, setReward] = useState(""); // Step 1
   const [details, setDetails] = useState({
     todo: "",
   });
@@ -15,18 +16,18 @@ const TodoList = ({ endpoint }) => {
 
     const { todo } = details;
 
-    // Combine task and priority
-    const taskWithPriority = priority !== "" ? `${todo} * Priority: ${priority}` : todo;
+    // Combine task, priority, and reward
+    const taskWithPriorityAndReward = `${todo} * Priority: ${priority} * Reward: ${reward}`;
 
     const res = await fetch(
       `https://project-100aa-default-rtdb.firebaseio.com/task/${endpoint}.json`,
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json", // Fix the content type
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          todo: taskWithPriority,
+          todo: taskWithPriorityAndReward,
         }),
       }
     );
@@ -40,10 +41,17 @@ const TodoList = ({ endpoint }) => {
     if (inputValue.trim()) {
       setTodos([
         ...todos,
-        { id: Date.now(), value: inputValue, priority: parseInt(priority), isComplete: false },
+        {
+          id: Date.now(),
+          value: inputValue,
+          priority: parseInt(priority),
+          reward: reward, // Step 5
+          isComplete: false,
+        },
       ]);
       setInputValue("");
       setPriority("");
+      setReward(""); // Step 5
     }
   };
 
@@ -78,8 +86,18 @@ const TodoList = ({ endpoint }) => {
           onChange={(e) => setDetails({ ...details, todo: e.target.value })}
         />
 
-        {/* Priority selection */}
-        <select
+      
+        {/* Reward input */}
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Add Reward"
+          value={reward} // Step 2
+          onChange={(e) => setReward(e.target.value)} // Step 2
+        />
+
+          {/* Priority selection */}
+          <select
           value={priority}
           onChange={(e) => setPriority(e.target.value)}
         >
@@ -88,6 +106,7 @@ const TodoList = ({ endpoint }) => {
           <option value="2">Medium Priority</option>
           <option value="3">High Priority</option>
         </select>
+
       </div>
       <hr />
 
@@ -105,6 +124,7 @@ const TodoList = ({ endpoint }) => {
             ></span>
             <span className="todo-list__value">{todo.value}</span>
             <span className="todo-list__priority">{`Priority: ${todo.priority}`}</span>
+            <span className="todo-list__reward">{`Reward: ${todo.reward}`}</span> {/* Step 3 */}
             <span
               className="todo-list__delete-btn"
               onClick={() => handleDeleteTodo(todo.id)}
