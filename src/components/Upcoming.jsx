@@ -102,9 +102,9 @@ const TodoList = ({ endpoint }) => {
         {/* Priority selection */}
         <select value={priority} onChange={(e) => setPriority(e.target.value)}>
           <option value="">Select Priority</option>
-          <option value="1">Low Priority</option>
+          <option value="3">Low Priority</option>
           <option value="2">Medium Priority</option>
-          <option value="3">High Priority</option>
+          <option value="1">High Priority</option>
         </select>
       </div>
       <hr />

@@ -58,11 +58,11 @@ const GetReward = () => {
   // You can also return the lists if needed
   return (
     <div>
-       <ul style={{ color: "#B6EADA" }}>
-      {rewards.map((item) => (
-        <li key={item}>{item}</li>
-      ))}
-    </ul>
+      <ul style={{ color: "#B6EADA" }}>
+        {rewards.map((item) => (
+          <li key={item} style={{ fontSize: "1.3em" }}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 };

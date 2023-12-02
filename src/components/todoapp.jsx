@@ -122,11 +122,11 @@ const TodoApp = () => {
       <div className="row mx-1 px-5 pb-3 w-80">
         <div className="col mx-auto">
           {tasks.map((tasks, index) => (
-            <div key={index} className="d-flex align-items-center mb-2">
-              <li>
-                <strong>Todo:</strong> {tasks.todo} | <strong>Reward:</strong>{" "}
-                {tasks.reward}
-              </li>
+            <div key={index} className="today-container d-flex align-items-center mb-2">
+            <li style={{ color: "#B6EADA", fontSize: "1.1em", marginRight: "10px" }}>
+              <strong>Todo:</strong> {tasks.todo} | <strong>Reward:</strong> {tasks.reward}
+            </li>
+            <div style={{ marginLeft: "auto" }}>
               <button
                 type="button"
                 className="btn btn-warning btn-sm mx-2"
@@ -150,6 +150,8 @@ const TodoApp = () => {
                 Delete
               </button>
             </div>
+          </div>
+          
           ))}
         </div>
       </div>

@@ -15,11 +15,11 @@ const UpcomingReward = () => {
             </p>
             <hr />
             <div style={{ height: "240px" }} className="overflow-auto lead">
-              <Upcoming />
+              {/* <Upcoming /> */}
               <ul style={{ color: "#B6EADA" }}>
-                <li>
+                <div className="reward-data centered-container">
                   <GetReward />
-                </li>
+                </div>
               </ul>
             </div>
           </div>

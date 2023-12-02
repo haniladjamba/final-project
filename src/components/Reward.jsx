@@ -12,7 +12,7 @@ const Reward = () => {
     const fetchData = async () => {
       try {
         const db = getDatabase();
-        const categories = ['other', 'today', 'tommorow'];
+        const categories = ['today', 'other', 'tommorow'];
         const allData = [];
         const allIDs = [];
   
