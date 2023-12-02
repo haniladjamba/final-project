@@ -1,5 +1,5 @@
 import Upcoming from "./Upcoming";
-import GetOther from "./database/GetOtherTask";
+import GetDataOther from "./database/GetOtherTask";
 
 const UpcomingOther = () => {
   return (
@@ -13,7 +13,7 @@ const UpcomingOther = () => {
           <Upcoming endpoint="other" />
           <ul style={{ color: "#B6EADA" }}>
             <li>
-              <GetOther />
+              <GetDataOther />
             </li>
           </ul>
         </div>

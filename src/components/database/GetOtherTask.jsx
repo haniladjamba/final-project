@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getDatabase, ref, onValue } from "firebase/database";
 
+import { getDatabase, ref, onValue } from "firebase/database";
 const GetOther = () => {
   // State to store the reward and todo lists
   const [rewardList, setRewardList] = useState([]);
@@ -8,7 +8,6 @@ const GetOther = () => {
 
   useEffect(() => {
     console.log('useEffect is running');
-
     const dbRef = ref(getDatabase(), 'task/other');
 
     // Set up the onValue event listener
@@ -70,6 +69,11 @@ const GetOther = () => {
         <li key={item}>{item}</li>
       ))}
     </ul>
+      <ul>
+        {todoList.map((todo, index) => (
+          <li key={index}>{todo}</li>
+        ))}
+      </ul>
     </div>
   );
 };

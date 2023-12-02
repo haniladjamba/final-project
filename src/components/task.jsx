@@ -1,3 +1,5 @@
+import GetPriority from "./database/GetPriority1";
+
 const Task = () => {
   return (
     <div>
@@ -17,10 +19,7 @@ const Task = () => {
             </div>
             <div className="card-body" style={{color: "#B6EADA"}}>
               {/* High priority tasks here */}
-              <li>Make payment to Tokopedia</li>
-              <li>Office Rent</li>
-              <li>Office grocery shopping</li>
-              {/* ... */}
+              <GetPriority priority={1}/>
             </div>
           </div>
         </div>
@@ -31,8 +30,7 @@ const Task = () => {
             </div>
             <div className="card-body" style={{color: "#B6EADA"}}>
               {/* Medium priority tasks here */}
-              <li>Final Project Front-End</li>
-              <li>Final Project System Analysis and Design</li>
+              <GetPriority priority={2}/>
               {/* ... */}
             </div>
           </div>
@@ -44,8 +42,7 @@ const Task = () => {
             </div>
             <div className="card-body" style={{color: "#B6EADA"}}>
               {/* Low priority tasks here */}
-              <li>Ask for Lunch to Clients</li>
-              <li>Create weekly tasks plan</li>
+              <GetPriority priority={3}/>
               {/* ... */}
             </div>
           </div>
