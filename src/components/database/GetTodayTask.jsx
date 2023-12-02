@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getDatabase, ref, child, onValue } from "firebase/database";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 const GetDataToday = () => {
   // State to store the reward and todo lists
@@ -66,7 +66,7 @@ const GetDataToday = () => {
   return (
     <>
       <div>
-      <ul>
+      <ul style={{ color: "#B6EADA" }}>
         {todoList.map((todo, index) => (
           <li key={index}>{todo}</li>
         ))}
