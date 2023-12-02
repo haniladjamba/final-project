@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Reward.css';
-import propTypes from 'prop-types';
-import { getDatabase, ref, get, remove, onValue } from 'firebase/database';
+import { getDatabase, ref, get, remove } from 'firebase/database';
 
 const Reward = () => {
   const [rewards, setRewards] = useState([

@@ -9,6 +9,8 @@ const TodoList = ({ endpoint }) => {
   const [reward, setReward] = useState(""); // Step 1
   const [details, setDetails] = useState({
     todo: "",
+    reward: "",
+    priority: 0
   });
 
   const PostData = async (e) => {
@@ -20,14 +22,16 @@ const TodoList = ({ endpoint }) => {
     const taskWithPriorityAndReward = `${todo} * Priority: ${priority} * Reward: ${reward}`;
 
     const res = await fetch(
-      `https://project-100aa-default-rtdb.firebaseio.com/task/${endpoint}.json`,
+      `https://fe-final-project-d25ae-default-rtdb.firebaseio.com/task/${endpoint}.json`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          todo: taskWithPriorityAndReward,
+          todo,
+          reward,
+          priority
         }),
       }
     );
@@ -93,7 +97,7 @@ const TodoList = ({ endpoint }) => {
           className="form-control"
           placeholder="Add Reward"
           value={reward} // Step 2
-          onChange={(e) => setReward(e.target.value)} // Step 2
+          onChange={(e) => setReward( e.target.value)} // Step 2
         />
 
           {/* Priority selection */}

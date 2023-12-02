@@ -64,13 +64,15 @@ const GetDataToday = () => {
 
   // You can also return the lists if needed
   return (
-    <div>
-       <ul style={{ color: "#B6EADA" }}>
-      {todoList.map((item) => (
-        <li key={item}>{item}</li>
-      ))}
-    </ul>
-    </div>
+    <>
+      <div>
+      <ul style={{ color: "#B6EADA" }}>
+        {todoList.map((todo, index) => (
+          <li key={index}>{todo}</li>
+        ))}
+      </ul>
+      </div>
+    </>
   );
 };
 
