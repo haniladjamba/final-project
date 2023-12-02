@@ -3,13 +3,12 @@ import { getDatabase, ref, onValue } from "firebase/database";
 
 const GetReward = () => {
   // State to store the reward and todo lists
-  const [rewardList, setRewardList] = useState([]);
-  const [todoList, setTodoList] = useState([]);
+  const [rewards, setRewards] = useState([]);
 
   useEffect(() => {
     console.log('useEffect is running');
 
-    const dbRef = ref(getDatabase(), 'task/other');
+    const dbRef = ref(getDatabase(), 'task/today');
 
     // Set up the onValue event listener
     const unsubscribe = onValue(dbRef, (snapshot) => {
@@ -43,10 +42,8 @@ const GetReward = () => {
 
         // Convert the Sets to arrays and update the state
         const uniqueRewardsArray = Array.from(uniqueRewards);
-        const uniqueTodosArray = Array.from(uniqueTodos);
 
-        setRewardList(uniqueRewardsArray);
-        setTodoList(uniqueTodosArray);
+        setRewards(uniqueRewardsArray);
       } else {
         console.log('No data available');
       }
@@ -56,17 +53,13 @@ const GetReward = () => {
     return () => {
       unsubscribe();
     };
-  }, []); // Empty dependency array for running on mount
-
-  // Access rewardList and todoList outside the useEffect
-  console.log('Reward List outside useEffect:', rewardList);
-  console.log('Todo List outside useEffect:', todoList);
+  }, []);
 
   // You can also return the lists if needed
   return (
     <div>
        <ul style={{ color: "#B6EADA" }}>
-      {todoList.map((item) => (
+      {rewards.map((item) => (
         <li key={item}>{item}</li>
       ))}
     </ul>

@@ -10,7 +10,7 @@ const TodoList = ({ endpoint }) => {
   const [details, setDetails] = useState({
     todo: "",
     reward: "",
-    priority: 0
+    priority: 0,
   });
 
   const PostData = async (e) => {
@@ -31,7 +31,7 @@ const TodoList = ({ endpoint }) => {
         body: JSON.stringify({
           todo,
           reward,
-          priority
+          priority: parseInt(priority, 10),
         }),
       }
     );
@@ -90,27 +90,22 @@ const TodoList = ({ endpoint }) => {
           onChange={(e) => setDetails({ ...details, todo: e.target.value })}
         />
 
-      
         {/* Reward input */}
         <input
           type="text"
           className="form-control"
           placeholder="Add Reward"
           value={reward} // Step 2
-          onChange={(e) => setReward( e.target.value)} // Step 2
+          onChange={(e) => setReward(e.target.value)} // Step 2
         />
 
-          {/* Priority selection */}
-          <select
-          value={priority}
-          onChange={(e) => setPriority(e.target.value)}
-        >
+        {/* Priority selection */}
+        <select value={priority} onChange={(e) => setPriority(e.target.value)}>
           <option value="">Select Priority</option>
           <option value="1">Low Priority</option>
           <option value="2">Medium Priority</option>
           <option value="3">High Priority</option>
         </select>
-
       </div>
       <hr />
 
@@ -128,7 +123,8 @@ const TodoList = ({ endpoint }) => {
             ></span>
             <span className="todo-list__value">{todo.value}</span>
             <span className="todo-list__priority">{`Priority: ${todo.priority}`}</span>
-            <span className="todo-list__reward">{`Reward: ${todo.reward}`}</span> {/* Step 3 */}
+            <span className="todo-list__reward">{`Reward: ${todo.reward}`}</span>{" "}
+            {/* Step 3 */}
             <span
               className="todo-list__delete-btn"
               onClick={() => handleDeleteTodo(todo.id)}
