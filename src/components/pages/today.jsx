@@ -30,21 +30,28 @@ const TodayTask = () => {
 
   return (
     <>
-      <p className="lead" style={{color: "#B6EADA"}}>
-        In this page you can add, delete, and edit you task you want to do.
-        You can also add a reward for your task.
-        By doing so, you can get more motivated and be more productive by the end of the day.
+      <p className="lead" style={{ color: "#B6EADA" }}>
+        In this page you can add, delete, and edit you task you want to do. You
+        can also add a reward for your task. By doing so, you can get more
+        motivated and be more productive by the end of the day.
       </p>
       <div>
         <div className="col-md-9 ">
-          <button
+          {/* <button
             type="button"
             className="btn btn-dark"
             onClick={addTodoAppContainer}
             style={{backgroundColor: "#5B8FB9"}}
           >
             Add
-          </button>
+          </button> */}
+          <Container>
+            <Row id="row">
+              <Col md={10} className="d-flex align-items-center">
+                <TodoApp />
+              </Col>
+            </Row>
+          </Container>
         </div>
         <div className="row gx-3 justify-content-center"></div>
         <div className="container">
