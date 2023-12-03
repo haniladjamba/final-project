@@ -1,32 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import TodoApp from "../todoapp";
-import TodoApp1 from "../todoapp1";
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const TodayTask = () => {
-  const [todoAppContainers, setTodoAppContainers] = useState([]);
-
-  const addTodoAppContainer = () => {
-    const newTodoAppContainer = (
-      <Container>
-      <Row id="row">
-        <Col md={10} className="d-flex align-items-center">
-          <TodoApp />
-        </Col>
-        <Col md={10} className="d-flex align-items-center">
-          <TodoApp1 />
-        </Col>
-      </Row>
-    </Container>
-    );
-    setTodoAppContainers((prevContainers) => [
-      ...prevContainers,
-      newTodoAppContainer,
-    ]);
-  };
+  const [todoAppContainers] = useState([]);
 
   return (
     <>
@@ -37,14 +17,6 @@ const TodayTask = () => {
       </p>
       <div>
         <div className="col-md-9 ">
-          {/* <button
-            type="button"
-            className="btn btn-dark"
-            onClick={addTodoAppContainer}
-            style={{backgroundColor: "#5B8FB9"}}
-          >
-            Add
-          </button> */}
           <Container>
             <Row id="row">
               <Col md={10} className="d-flex align-items-center">
@@ -63,7 +35,6 @@ const TodayTask = () => {
             ))}
           </div>
         </div>
-        {/* Clear the float after the fourth box */}
       </div>
     </>
   );

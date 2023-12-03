@@ -13,9 +13,16 @@ const SideBar = () => {
 
   return (
     <>
-      <nav style={{backgroundColor: "#301E67"}} id="sidebar" className={sidebarActive ? "active" : ""}>
+      <nav
+        style={{ backgroundColor: "#301E67" }}
+        id="sidebar"
+        className={sidebarActive ? "active" : ""}
+      >
         <div className="p-4 pt-5">
-         
+          <a
+            href="#"
+            className="img logo rounded-circle mb-5"
+          />
           <ul className="list-unstyled components mb-5">
             <li className="Active">
               <Link to="pages/upcoming">Upcoming</Link>
@@ -30,20 +37,21 @@ const SideBar = () => {
               <Link to="pages/reward">Reward</Link>
             </li>
           </ul>
-          <div className="footer">
-
-          </div>
+          <div className="footer"></div>
         </div>
       </nav>
       <div id="content" className="p-4 p-md-5">
-        <nav style={{backgroundColor: "#301E67"}} className="navbar navbar-expand-lg navbar-light">
+        <nav
+          style={{ backgroundColor: "#301E67" }}
+          className="navbar navbar-expand-lg navbar-light"
+        >
           <div className="container-fluid">
             <button
               type="button"
               id="sidebarCollapse"
               className="btn btn-dark"
               onClick={handleSidebarToggle}
-              style={{backgroundColor: "#5B8FB9"}}
+              style={{ backgroundColor: "#5B8FB9" }}
             >
               <i className="bi bi-list" />
               <span className="sr-only">Toggle Menu</span>
@@ -52,7 +60,13 @@ const SideBar = () => {
           </div>
         </nav>
         <Show />
-        <p style={{textAlign: "center"}}>Copyright © 2023. All rights reserved. This comprehensive and intuitive to-do list application, designed to enhance productivity and streamline daily tasks, is the intellectual property of Group 5 FE-D. Unauthorized reproduction or distribution without permission is strictly prohibited.</p>
+        <p style={{ textAlign: "center" }}>
+          Copyright © 2023. All rights reserved. This comprehensive and
+          intuitive to-do list application, designed to enhance productivity and
+          streamline daily tasks, is the intellectual property of Group 5 FE-D.
+          Unauthorized reproduction or distribution without permission is
+          strictly prohibited.
+        </p>
       </div>
     </>
   );

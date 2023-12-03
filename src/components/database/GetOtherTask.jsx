@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { getDatabase, ref, onValue } from "firebase/database";
-const GetOther = () => {
+const GetDataOther = () => {
   // State to store the reward and todo lists
   const [rewardList, setRewardList] = useState([]);
   const [todoList, setTodoList] = useState([]);
@@ -69,13 +69,8 @@ const GetOther = () => {
         <li key={item}>{item}</li>
       ))}
     </ul>
-      <ul>
-        {todoList.map((todo, index) => (
-          <li key={index}>{todo}</li>
-        ))}
-      </ul>
     </div>
   );
 };
 
-export default GetOther;
+export default GetDataOther;

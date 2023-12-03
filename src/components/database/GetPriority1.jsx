@@ -17,7 +17,7 @@ const GetPriority = ({ priority }) => {
         const db = getDatabase();
 
          // Fetch data from 'other', 'today', and 'tomorrow'
-         const categories = ['other', 'today', 'tommorow'];
+         const categories = ['today', 'tommorow', 'other'];
          const allData = [];
  
          for (const category of categories) {
@@ -51,7 +51,7 @@ const GetPriority = ({ priority }) => {
     <>
         {todos.map((todo, index) => (
           <li key={index}>
-            <strong>Todo:</strong> {todo.todo} | <strong>Reward:</strong> {todo.reward} | <strong>From:</strong> {todo.category}
+            <strong>Task:</strong> {todo.todo} | <strong>Reward:</strong> {todo.reward} | <strong>Due:</strong> {todo.category}
           </li>
         ))}
     </>
