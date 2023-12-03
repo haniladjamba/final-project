@@ -12,7 +12,10 @@
   "dependencies": {
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.2",
+    "endpoint": "^0.4.5",
+    "firebase": "^10.7.0",
     "jquery": "^3.7.1",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
