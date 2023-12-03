@@ -85,7 +85,7 @@ const Reward = () => {
             <h3>{rewards.reward}</h3>
             <p>{rewards.todo}</p>
             <div className="task-id">
-              Task ID: {rewards.priority} ({rewards.category})
+              Priority: {rewards.priority} ({rewards.category})
               <button
                 className="claim-button btn btn-success"
                 onClick={() => handleClaim(index)}

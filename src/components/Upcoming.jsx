@@ -17,10 +17,6 @@ const TodoList = ({ endpoint }) => {
     e.preventDefault();
 
     const { todo } = details;
-
-    // Combine task, priority, and reward
-    const taskWithPriorityAndReward = `${todo} * Priority: ${priority} * Reward: ${reward}`;
-
     const res = await fetch(
       `https://fe-final-project-d25ae-default-rtdb.firebaseio.com/task/${endpoint}.json`,
       {

@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 import Header from "./header";
 import Show from "./renderer/show";
 
@@ -16,13 +15,8 @@ const SideBar = () => {
     <>
       <nav style={{backgroundColor: "#301E67"}} id="sidebar" className={sidebarActive ? "active" : ""}>
         <div className="p-4 pt-5">
-          <a
-            href="#"
-            className="img logo rounded-circle mb-5"
-            style={{ backgroundImage: "url(images/logo.jpg)" }}
-          />
+         
           <ul className="list-unstyled components mb-5">
-
             <li className="Active">
               <Link to="pages/upcoming">Upcoming</Link>
             </li>
@@ -58,6 +52,7 @@ const SideBar = () => {
           </div>
         </nav>
         <Show />
+        <p style={{textAlign: "center"}}>Copyright © 2023. All rights reserved. This comprehensive and intuitive to-do list application, designed to enhance productivity and streamline daily tasks, is the intellectual property of Group 5 FE-D. Unauthorized reproduction or distribution without permission is strictly prohibited.</p>
       </div>
     </>
   );

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import { getDatabase, ref, get, remove, update} from 'firebase/database';
@@ -114,17 +115,17 @@ const TodoApp = () => {
   return (
     <div
       style={{ backgroundColor: "#301E67" }}
-      className="container m-5 p-2 rounded mx-auto shadow"
+      className= "container m-5 p-2 rounded mx-auto shadow" 
     >
       {/* ... (unchanged code) */}
-      <h2 style={{ color: "#B6EADA" }}>Task</h2>
+      <h2 style={{ color: "#B6EADA", textAlign: "center", fontSize:"3.5em"}}>Today's Agenda</h2>
       <TodoList endpoint={"today"}/>
       <div className="row mx-1 px-5 pb-3 w-80">
         <div className="col mx-auto">
           {tasks.map((tasks, index) => (
-            <div key={index} className="today-container d-flex align-items-center mb-2">
+            <div key={index} className="today-container align-items-center mb-2" style={{fontSize:"1.3em"  , padding: "10px"}}>
             <li style={{ color: "#B6EADA", fontSize: "1.1em", marginRight: "10px" }}>
-              <strong>Todo:</strong> {tasks.todo} | <strong>Reward:</strong> {tasks.reward}
+              <strong>Task:</strong> {tasks.todo} | <strong>Reward:</strong> {tasks.reward}
             </li>
             <div style={{ marginLeft: "auto" }}>
               <button
